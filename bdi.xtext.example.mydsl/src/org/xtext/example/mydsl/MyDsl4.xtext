@@ -1,0 +1,149 @@
+grammar org.xtext.example.mydsl.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
+
+	BDI:
+		'BDIModel'
+			(Agents+=Agent)+
+		'end BDIModel'
+	;
+	
+	Agent:
+			'Agent' name=ID
+			(Belief+=BeliefSet)*
+			(Plan+=Plans)*
+			(Goal+=Goals)*
+			(Event+=Events)*
+			(Attributes += Attributes)*
+		'end Agent'
+	;
+		
+	Events:
+		'Events' name=ID //
+		(Events+=Event)+
+		'end Events'
+	;
+			
+	Event:
+    	'Event' name=ID code=ID
+    	EventType=STRING
+    	(EventAttributes += Attributes)+
+    	'end Event'
+    ;
+    
+    Plans:
+	(Plans+=Plan)+
+	//'end Plans'
+    ;
+    
+     Plan:
+    	'Plan' name=ID
+    	(Action+=Actions)*
+    	'end Plan'
+    ;
+    
+ 	BeliefSet:
+        'BeliefSet' name=ID
+        (BeliefSet+=Belief)+
+        'end BeliefSet'
+    ;
+    
+    Belief:
+      'Belief' name=ID
+       (Fact+=Fact)*
+       (Statements+=Statements)*
+       'end Belief'
+    ;
+     Fact:
+   		predicate1=Predicate operator=Operator predicate2=Predicate '=' Boolean
+   		'end Fact'
+	;
+	
+	Predicate:
+		STRING	
+	;
+	
+	Operator:
+		(equalTo?='==')|(largerThan?='>')|(smallerThan?='<')|(largerOrEqualTo?='>=')|(smallerOrEqualTo?='<=')|(notEqualTo?='!=')
+	;
+	
+	Boolean:
+		'true'|'false'
+	;
+	
+	Statements:
+		(Statements+=Statement)+
+	;
+	
+	Statement:
+		STRING
+	;
+
+	Goals:
+		(Goals+=Goal)+
+		//'end Goals'
+	;
+    
+    Goal:
+    	Achieve | Query | Maintain | Perform
+    	'end Goal'
+	;
+	
+	Achieve:
+		'Achieve' name=ID
+        Condition=Condition
+       'end Achieve'
+	;
+	
+	Query:
+		'Query' name=ID
+        Condition=Condition
+        Result=Result
+        'end Query'
+	;
+	
+	Maintain:
+		'Maintain' name=ID
+        Condition=Condition
+		'end Maintain'
+	;
+	
+	Perform:
+		'Perform' name=ID
+        Condition=Condition
+        'end Perform'
+	;
+	
+	Condition:
+		(Statements+=Statement)+
+	;
+	
+	Result:
+		STRING
+	;
+
+	
+	Actions:
+		(Actions+=Action)+
+	;
+	
+	Action:
+		'Action' name=ID
+		code=STRING
+		'end Action'
+	;
+
+	Attributes :
+		'Attributes' type=[AttributeType] '{'		
+		('value' value=Parameter)?
+		'}'
+	;
+	
+	AttributeType:
+		'AttributeType' name = ID
+		('Description' description=STRING)?
+	;
+	  
+	Parameter:
+		INT |STRING|ID	
+	; 

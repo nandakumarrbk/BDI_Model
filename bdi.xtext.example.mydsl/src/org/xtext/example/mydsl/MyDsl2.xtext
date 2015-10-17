@@ -1,0 +1,95 @@
+grammar org.xtext.example.mydsl.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
+
+	BDI:
+		'BDIModel'
+		'Agent' name=ID
+		
+		'end Agent'
+		'end BDIModel'
+	;
+	
+	Events:
+		'Events'
+		(Events+=Event)+
+	;
+			
+	Event:
+    	'Event' name=ID code=ID
+    	Type=STRING
+    	State=STRING
+    ;
+    
+     Plan:
+    	'Plan' name=ID
+    	//B=BeliefSet
+    	//A=Actions
+    ;
+    
+ 	BeliefSet:
+        'BeliefSet' name=ID
+        (BeliefSet+=Belief)+
+    ;
+    
+    Belief:
+      'Belief' name=ID
+       Fact
+    ;
+     	Fact:
+   		Statement
+	;
+	
+	Statement:
+		STRING
+	;
+
+    
+    Goal:
+    	Achieve|Query|Maintain|Perform
+	;
+	
+	Achieve:
+		name=ID
+        Condition=Condition
+       // Plan=Plan
+	;
+	
+	Query:
+		name=ID
+        Condition=Condition
+      //  Plan=Plan
+        Result=Result
+	;
+	
+	Maintain:
+		name=ID
+        Condition=Condition
+      //  Plan=Plan
+      //  Goal=Goal
+	;
+	
+	Perform:
+		name=ID
+        Condition=Condition
+      //  Plan=Plan
+	;
+	
+	Condition:
+		//Belief
+		STRING
+	;
+	
+	Result:
+		STRING
+	;
+
+	
+	Actions:
+		(Actions+=Action)+
+	;
+	
+	Action:
+		code=ID
+	;
+

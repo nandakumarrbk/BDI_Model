@@ -1,0 +1,168 @@
+grammar org.xtext.example.mydsl.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
+
+	BDI:
+		'BDIModel'
+			(Agents+=Agent)+
+		'end BDIModel'
+	;
+	
+	Agent:
+			'Agent' name=ID
+			(Import+=Imports)*
+			(Belief+=BeliefSet)*
+			(Plan+=Plans)*
+			(Event+=Events)*
+			(Parameters += Parameters)*
+		'end Agent'
+	;
+	
+	Imports:
+		'Imports'
+		(Imports+=Import)+
+		'end Imports'
+	;
+	
+	Import:
+		'Import'
+		Filename
+		'end Import'
+	;
+	
+	Filename:
+		STRING
+	;
+		
+	Events:
+		'Event'
+		(Events+=Event)+
+		'end Events'
+	;
+			
+	Event:
+    	'Event' name=ID
+    	EventType=STRING
+    	(Parameter+=Parameter)*
+    	'end Event'
+    ;
+    
+    Parameters:
+    	'Parameters'
+    	(Parameters+=Parameter)+
+    	'end Parameters'
+    ;
+    
+    Parameter:
+    	'Parameter' name=ID
+    	Value
+    	'end Parameter'
+    ;
+    
+    Value:
+    	'Value'
+    	Code
+    	'end Value'
+    ;
+    
+    Code:
+    	STRING //Code is actual code not just a string
+    ;
+    
+    Plans:
+    'Plans'	
+	(Plans+=Plan)+
+	'end Plans'
+    ;
+    
+     Plan:
+    	'Plan' name=ID
+    	Body=Body
+    	Trigger=Trigger
+    	'end Plan'
+    ;
+    
+    Body:
+    	'Body'
+    	STRING
+    	'end Body'
+    ;
+    
+    Trigger:
+    	'Trigger'
+    		Event | Goal
+    	'end Trigger'
+    ;
+    
+ 	BeliefSet:
+        'BeliefSet' name=ID
+        (BeliefSet+=Belief)+
+        'end BeliefSet'
+    ;
+    
+    Belief:
+      'Belief' name=ID
+       (Fact+=Fact)*
+       'end Belief'
+    ;
+    
+     Fact:
+     	'Fact'
+   		Statements=Statements
+   		STRING
+   		'end Fact'
+	;
+	
+	Statements:
+		(Statements+=Statement)+
+	;
+	
+	Statement:
+		Code
+	;
+
+	Goals:
+		'Goals'
+		(Goals+=Goal)+
+		'end Goals'
+	;
+    
+    Goal:
+    	Achieve | Query | Maintain | Perform
+	;
+	
+	Achieve:
+		'Achieve' name=ID
+        Condition=Condition
+       'end Achieve'
+	;
+	
+	Query:
+		'Query' name=ID
+        Condition=Condition
+        Result=Result
+        'end Query'
+	;
+	
+	Maintain:
+		'Maintain' name=ID
+        Condition=Condition
+		'end Maintain'
+	;
+	
+	Perform:
+		'Perform' name=ID
+        Condition=Condition
+        'end Perform'
+	;
+	
+	Condition:
+		'Condition'
+		(Statements+=Statement)+
+		'end Condition'
+	;
+	
+	Result:
+		STRING
+	;
+

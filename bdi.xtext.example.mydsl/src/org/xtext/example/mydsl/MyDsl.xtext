@@ -1,0 +1,168 @@
+grammar org.xtext.example.mydsl.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
+
+	BDI:
+		'<BDIModel>'
+			(Agents+=Agent)+
+		'</BDIModel>'
+	;
+	
+	Agent:
+			'<Agent>' name=ID
+			(Import+=Imports)*
+			(Belief+=BeliefSet)*
+			(Plan+=Plans)*
+			(Event+=Events)*
+			(Parameters += Parameters)*
+		'</Agent>'
+	;
+	
+	Imports:
+		'<Imports>'
+		(Imports+=Import)+
+		'</Imports>'
+	;
+	
+	Import:
+		'<Import>'
+		Filename
+		'</Import>'
+	;
+	
+	Filename:
+		STRING
+	;
+		
+	Events:
+		'<Event>'
+		(Events+=Event)+
+		'</Events>'
+	;
+			
+	Event:
+    	'<Event>' name=ID
+    	EventType=STRING
+    	(Parameter+=Parameter)*
+    	'</Event>'
+    ;
+    
+    Parameters:
+    	'<Parameters>'
+    	(Parameters+=Parameter)+
+    	'</Parameters>'
+    ;
+    
+    Parameter:
+    	'<Parameter>' name=ID
+    	Value
+    	'</Parameter>'
+    ;
+    
+    Value:
+    	'<Value>'
+    	Code
+    	'</Value>'
+    ;
+    
+    Code:
+    	STRING //Code is actual code not just a string
+    ;
+    
+    Plans:
+    '<Plans>'	
+	(Plans+=Plan)+
+	'</Plans>'
+    ;
+    
+     Plan:
+    	'<Plan>' name=ID
+    	Body=Body
+    	Trigger=Trigger
+    	'</Plan>'
+    ;
+    
+    Body:
+    	'<Body>'
+    	STRING
+    	'</Body>'
+    ;
+    
+    Trigger:
+    	'<Trigger>'
+    		Event | Goal
+    	'</Trigger>'
+    ;
+    
+ 	BeliefSet:
+        '<BeliefSet>' name=ID
+        (BeliefSet+=Belief)+
+        '</BeliefSet>'
+    ;
+    
+    Belief:
+      '<Belief>' name=ID
+       (Fact+=Fact)*
+       '</Belief>'
+    ;
+    
+     Fact:
+     	'<Fact>'
+   		Statements=Statements
+   		STRING
+   		'</Fact>'
+	;
+	
+	Statements:
+		(Statements+=Statement)+
+	;
+	
+	Statement:
+		Code
+	;
+
+	Goals:
+		'<Goals>'
+		(Goals+=Goal)+
+		'</Goals>'
+	;
+    
+    Goal:
+    	Achieve | Query | Maintain | Perform
+	;
+	
+	Achieve:
+		'<Achieve>' name=ID
+        Condition=Condition
+       '</Achieve>'
+	;
+	
+	Query:
+		'<Query>' name=ID
+        Condition=Condition
+        Result=Result
+        '</Query>'
+	;
+	
+	Maintain:
+		'<Maintain>' name=ID
+        Condition=Condition
+		'</Maintain>'
+	;
+	
+	Perform:
+		'<Perform>' name=ID
+        Condition=Condition
+        '</Perform>'
+	;
+	
+	Condition:
+		'<Condition>'
+		(Statements+=Statement)+
+		'</Condition>'
+	;
+	
+	Result:
+		STRING
+	;
+
