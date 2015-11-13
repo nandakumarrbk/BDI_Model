@@ -104,7 +104,6 @@ public class MyDslSwitch<T> extends Switch<T>
       {
         Event event = (Event)theEObject;
         T result = caseEvent(event);
-        if (result == null) result = caseTrigger(event);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -119,6 +118,44 @@ public class MyDslSwitch<T> extends Switch<T>
       {
         Parameter parameter = (Parameter)theEObject;
         T result = caseParameter(parameter);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyDslPackage.OPERATOR:
+      {
+        Operator operator = (Operator)theEObject;
+        T result = caseOperator(operator);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyDslPackage.CONDITION:
+      {
+        Condition condition = (Condition)theEObject;
+        T result = caseCondition(condition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyDslPackage.EXPRESSION:
+      {
+        Expression expression = (Expression)theEObject;
+        T result = caseExpression(expression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyDslPackage.TERM:
+      {
+        Term term = (Term)theEObject;
+        T result = caseTerm(term);
+        if (result == null) result = caseExpression(term);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyDslPackage.FACTOR:
+      {
+        Factor factor = (Factor)theEObject;
+        T result = caseFactor(factor);
+        if (result == null) result = caseTerm(factor);
+        if (result == null) result = caseExpression(factor);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -182,7 +219,6 @@ public class MyDslSwitch<T> extends Switch<T>
       {
         Goal goal = (Goal)theEObject;
         T result = caseGoal(goal);
-        if (result == null) result = caseTrigger(goal);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -191,7 +227,6 @@ public class MyDslSwitch<T> extends Switch<T>
         Achieve achieve = (Achieve)theEObject;
         T result = caseAchieve(achieve);
         if (result == null) result = caseGoal(achieve);
-        if (result == null) result = caseTrigger(achieve);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -200,7 +235,6 @@ public class MyDslSwitch<T> extends Switch<T>
         Query query = (Query)theEObject;
         T result = caseQuery(query);
         if (result == null) result = caseGoal(query);
-        if (result == null) result = caseTrigger(query);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -209,7 +243,6 @@ public class MyDslSwitch<T> extends Switch<T>
         Maintain maintain = (Maintain)theEObject;
         T result = caseMaintain(maintain);
         if (result == null) result = caseGoal(maintain);
-        if (result == null) result = caseTrigger(maintain);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -218,14 +251,40 @@ public class MyDslSwitch<T> extends Switch<T>
         Perform perform = (Perform)theEObject;
         T result = casePerform(perform);
         if (result == null) result = caseGoal(perform);
-        if (result == null) result = caseTrigger(perform);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case MyDslPackage.CONDITION:
+      case MyDslPackage.PLUS:
       {
-        Condition condition = (Condition)theEObject;
-        T result = caseCondition(condition);
+        Plus plus = (Plus)theEObject;
+        T result = casePlus(plus);
+        if (result == null) result = caseExpression(plus);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyDslPackage.MINUS:
+      {
+        Minus minus = (Minus)theEObject;
+        T result = caseMinus(minus);
+        if (result == null) result = caseExpression(minus);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyDslPackage.MULTIPLY:
+      {
+        Multiply multiply = (Multiply)theEObject;
+        T result = caseMultiply(multiply);
+        if (result == null) result = caseTerm(multiply);
+        if (result == null) result = caseExpression(multiply);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MyDslPackage.DIVISION:
+      {
+        Division division = (Division)theEObject;
+        T result = caseDivision(division);
+        if (result == null) result = caseTerm(division);
+        if (result == null) result = caseExpression(division);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -341,6 +400,86 @@ public class MyDslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseParameter(Parameter object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Operator</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Operator</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseOperator(Operator object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Condition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Condition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCondition(Condition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExpression(Expression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Term</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Term</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTerm(Term object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Factor</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Factor</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFactor(Factor object)
   {
     return null;
   }
@@ -554,17 +693,65 @@ public class MyDslSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Condition</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Plus</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Condition</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Plus</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseCondition(Condition object)
+  public T casePlus(Plus object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Minus</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Minus</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMinus(Minus object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Multiply</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Multiply</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMultiply(Multiply object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Division</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Division</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDivision(Division object)
   {
     return null;
   }

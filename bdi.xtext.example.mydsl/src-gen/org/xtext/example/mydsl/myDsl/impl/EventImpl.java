@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -29,14 +30,35 @@ import org.xtext.example.mydsl.myDsl.Parameter;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.xtext.example.mydsl.myDsl.impl.EventImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.myDsl.impl.EventImpl#getEventType <em>Event Type</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.myDsl.impl.EventImpl#getParameter <em>Parameter</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class EventImpl extends TriggerImpl implements Event
+public class EventImpl extends MinimalEObjectImpl.Container implements Event
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The default value of the '{@link #getEventType() <em>Event Type</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -86,6 +108,29 @@ public class EventImpl extends TriggerImpl implements Event
   protected EClass eStaticClass()
   {
     return MyDslPackage.Literals.EVENT;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MyDslPackage.EVENT__NAME, oldName, name));
   }
 
   /**
@@ -151,6 +196,8 @@ public class EventImpl extends TriggerImpl implements Event
   {
     switch (featureID)
     {
+      case MyDslPackage.EVENT__NAME:
+        return getName();
       case MyDslPackage.EVENT__EVENT_TYPE:
         return getEventType();
       case MyDslPackage.EVENT__PARAMETER:
@@ -170,6 +217,9 @@ public class EventImpl extends TriggerImpl implements Event
   {
     switch (featureID)
     {
+      case MyDslPackage.EVENT__NAME:
+        setName((String)newValue);
+        return;
       case MyDslPackage.EVENT__EVENT_TYPE:
         setEventType((String)newValue);
         return;
@@ -191,6 +241,9 @@ public class EventImpl extends TriggerImpl implements Event
   {
     switch (featureID)
     {
+      case MyDslPackage.EVENT__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case MyDslPackage.EVENT__EVENT_TYPE:
         setEventType(EVENT_TYPE_EDEFAULT);
         return;
@@ -211,6 +264,8 @@ public class EventImpl extends TriggerImpl implements Event
   {
     switch (featureID)
     {
+      case MyDslPackage.EVENT__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case MyDslPackage.EVENT__EVENT_TYPE:
         return EVENT_TYPE_EDEFAULT == null ? eventType != null : !EVENT_TYPE_EDEFAULT.equals(eventType);
       case MyDslPackage.EVENT__PARAMETER:
@@ -230,7 +285,9 @@ public class EventImpl extends TriggerImpl implements Event
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (EventType: ");
+    result.append(" (name: ");
+    result.append(name);
+    result.append(", EventType: ");
     result.append(eventType);
     result.append(')');
     return result.toString();

@@ -9,14 +9,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Import" upperBound="-1"
         eType="#//Imports" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Belief" upperBound="-1"
-        eType="#//BeliefSet" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Plan" upperBound="-1" eType="#//Plans"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Event" upperBound="-1"
         eType="#//Events" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Parameters" upperBound="-1"
         eType="#//Parameters" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Belief" upperBound="-1"
+        eType="#//BeliefSet" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Plan" upperBound="-1" eType="#//Plans"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Imports">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Imports" unique="false"
@@ -26,7 +26,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Events" upperBound="-1"
         eType="#//Event" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Event" eSuperTypes="#//Trigger">
+  <eClassifiers xsi:type="ecore:EClass" name="Event">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="EventType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Parameter" upperBound="-1"
         eType="#//Parameter" containment="true"/>
@@ -37,6 +38,35 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Parameter">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Operator">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="equalTo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="largerThan" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="smallerThan" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="largerOrEqualTo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="smallerOrEqualTo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="notEqualTo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Condition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subjective" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operator" eType="#//Operator"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objective" eType="#//Expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="and" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="or" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="compareCondition" eType="#//Condition"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Term" eSuperTypes="#//Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Factor" eSuperTypes="#//Term">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="number" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="variable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="string" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="boolean" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//Expression"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Plans">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Plans" upperBound="-1"
@@ -49,7 +79,8 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Trigger">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Event" eType="#//Event"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Goal" eType="#//Goal"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BeliefSet">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -73,7 +104,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Goals" upperBound="-1"
         eType="#//Goal" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Goal" eSuperTypes="#//Trigger">
+  <eClassifiers xsi:type="ecore:EClass" name="Goal">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Condition" eType="#//Condition"
         containment="true"/>
   </eClassifiers>
@@ -83,8 +115,26 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Maintain" eSuperTypes="#//Goal"/>
   <eClassifiers xsi:type="ecore:EClass" name="Perform" eSuperTypes="#//Goal"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Condition">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Statements" unique="false"
-        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Plus" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="#//Expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" eType="#//Term"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Minus" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="#//Expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" eType="#//Term"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Multiply" eSuperTypes="#//Term">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="#//Term" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" eType="#//Factor"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Division" eSuperTypes="#//Term">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="#//Term" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" eType="#//Factor"
+        containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

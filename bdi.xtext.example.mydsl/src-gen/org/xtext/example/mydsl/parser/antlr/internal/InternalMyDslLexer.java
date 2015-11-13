@@ -13,31 +13,31 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalMyDslLexer extends Lexer {
     public static final int T__50=50;
+    public static final int RULE_BOOLEAN=6;
     public static final int T__19=19;
     public static final int T__15=15;
     public static final int T__16=16;
     public static final int T__17=17;
     public static final int T__18=18;
-    public static final int T__11=11;
-    public static final int T__12=12;
-    public static final int T__13=13;
+    public static final int RULE_OCTET=9;
+    public static final int RULE_NETWORK=7;
     public static final int T__14=14;
     public static final int T__51=51;
     public static final int RULE_ID=4;
     public static final int T__26=26;
     public static final int T__27=27;
     public static final int T__28=28;
-    public static final int RULE_INT=6;
+    public static final int RULE_INT=8;
     public static final int T__29=29;
     public static final int T__22=22;
-    public static final int RULE_ML_COMMENT=7;
+    public static final int RULE_ML_COMMENT=10;
     public static final int T__23=23;
     public static final int T__24=24;
     public static final int T__25=25;
     public static final int T__20=20;
     public static final int T__21=21;
     public static final int RULE_STRING=5;
-    public static final int RULE_SL_COMMENT=8;
+    public static final int RULE_SL_COMMENT=11;
     public static final int T__37=37;
     public static final int T__38=38;
     public static final int T__39=39;
@@ -49,8 +49,8 @@ public class InternalMyDslLexer extends Lexer {
     public static final int T__30=30;
     public static final int T__31=31;
     public static final int T__32=32;
-    public static final int RULE_WS=9;
-    public static final int RULE_ANY_OTHER=10;
+    public static final int RULE_WS=12;
+    public static final int RULE_ANY_OTHER=13;
     public static final int T__48=48;
     public static final int T__49=49;
     public static final int T__44=44;
@@ -75,78 +75,15 @@ public class InternalMyDslLexer extends Lexer {
     }
     public String getGrammarFileName() { return "../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g"; }
 
-    // $ANTLR start "T__11"
-    public final void mT__11() throws RecognitionException {
-        try {
-            int _type = T__11;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:11:7: ( '<BDIModel>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:11:9: '<BDIModel>'
-            {
-            match("<BDIModel>"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__11"
-
-    // $ANTLR start "T__12"
-    public final void mT__12() throws RecognitionException {
-        try {
-            int _type = T__12;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:12:7: ( '</BDIModel>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:12:9: '</BDIModel>'
-            {
-            match("</BDIModel>"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__12"
-
-    // $ANTLR start "T__13"
-    public final void mT__13() throws RecognitionException {
-        try {
-            int _type = T__13;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:13:7: ( '<Agent>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:13:9: '<Agent>'
-            {
-            match("<Agent>"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__13"
-
     // $ANTLR start "T__14"
     public final void mT__14() throws RecognitionException {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:14:7: ( '</Agent>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:14:9: '</Agent>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:11:7: ( 'BDIModel {' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:11:9: 'BDIModel {'
             {
-            match("</Agent>"); 
+            match("BDIModel {"); 
 
 
             }
@@ -164,11 +101,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:15:7: ( '<Imports>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:15:9: '<Imports>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:12:7: ( '}' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:12:9: '}'
             {
-            match("<Imports>"); 
-
+            match('}'); 
 
             }
 
@@ -185,10 +121,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:16:7: ( '</Imports>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:16:9: '</Imports>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:13:7: ( 'Agent' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:13:9: 'Agent'
             {
-            match("</Imports>"); 
+            match("Agent"); 
 
 
             }
@@ -206,11 +142,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:17:7: ( '<Import>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:17:9: '<Import>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:14:7: ( '{' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:14:9: '{'
             {
-            match("<Import>"); 
-
+            match('{'); 
 
             }
 
@@ -227,10 +162,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:18:7: ( '</Import>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:18:9: '</Import>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:15:7: ( 'Imports {' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:15:9: 'Imports {'
             {
-            match("</Import>"); 
+            match("Imports {"); 
 
 
             }
@@ -248,10 +183,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:19:7: ( '<Event>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:19:9: '<Event>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:16:7: ( 'Import {' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:16:9: 'Import {'
             {
-            match("<Event>"); 
+            match("Import {"); 
 
 
             }
@@ -269,10 +204,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:20:7: ( '</Events>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:20:9: '</Events>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:17:7: ( 'Events {' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:17:9: 'Events {'
             {
-            match("</Events>"); 
+            match("Events {"); 
 
 
             }
@@ -290,10 +225,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:21:7: ( '</Event>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:21:9: '</Event>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:18:7: ( 'Event' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:18:9: 'Event'
             {
-            match("</Event>"); 
+            match("Event"); 
 
 
             }
@@ -311,10 +246,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:22:7: ( '<Parameters>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:22:9: '<Parameters>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:19:7: ( 'Parameters {' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:19:9: 'Parameters {'
             {
-            match("<Parameters>"); 
+            match("Parameters {"); 
 
 
             }
@@ -332,10 +267,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:23:7: ( '</Parameters>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:23:9: '</Parameters>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:20:7: ( 'Parameter {' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:20:9: 'Parameter {'
             {
-            match("</Parameters>"); 
+            match("Parameter {"); 
 
 
             }
@@ -353,11 +288,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:24:7: ( '<Parameter>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:24:9: '<Parameter>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:21:7: ( '=' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:21:9: '='
             {
-            match("<Parameter>"); 
-
+            match('='); 
 
             }
 
@@ -374,10 +308,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:25:7: ( '</Parameter>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:25:9: '</Parameter>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:22:7: ( 'Value {' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:22:9: 'Value {'
             {
-            match("</Parameter>"); 
+            match("Value {"); 
 
 
             }
@@ -395,10 +329,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:26:7: ( '<Value>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:26:9: '<Value>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:23:7: ( '==' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:23:9: '=='
             {
-            match("<Value>"); 
+            match("=="); 
 
 
             }
@@ -416,11 +350,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:27:7: ( '</Value>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:27:9: '</Value>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:24:7: ( '>' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:24:9: '>'
             {
-            match("</Value>"); 
-
+            match('>'); 
 
             }
 
@@ -437,11 +370,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:28:7: ( '<Plans>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:28:9: '<Plans>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:25:7: ( '<' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:25:9: '<'
             {
-            match("<Plans>"); 
-
+            match('<'); 
 
             }
 
@@ -458,10 +390,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:29:7: ( '</Plans>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:29:9: '</Plans>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:26:7: ( '>=' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:26:9: '>='
             {
-            match("</Plans>"); 
+            match(">="); 
 
 
             }
@@ -479,10 +411,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:30:7: ( '<Plan>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:30:9: '<Plan>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:27:7: ( '<=' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:27:9: '<='
             {
-            match("<Plan>"); 
+            match("<="); 
 
 
             }
@@ -500,10 +432,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:31:7: ( '</Plan>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:31:9: '</Plan>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:28:7: ( '!=' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:28:9: '!='
             {
-            match("</Plan>"); 
+            match("!="); 
 
 
             }
@@ -521,10 +453,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:32:7: ( '<Body>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:32:9: '<Body>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:29:7: ( 'and' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:29:9: 'and'
             {
-            match("<Body>"); 
+            match("and"); 
 
 
             }
@@ -542,10 +474,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:33:7: ( '</Body>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:33:9: '</Body>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:30:7: ( 'or' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:30:9: 'or'
             {
-            match("</Body>"); 
+            match("or"); 
 
 
             }
@@ -563,11 +495,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:34:7: ( '<Trigger>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:34:9: '<Trigger>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:31:7: ( '+' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:31:9: '+'
             {
-            match("<Trigger>"); 
-
+            match('+'); 
 
             }
 
@@ -584,11 +515,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:35:7: ( '</Trigger>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:35:9: '</Trigger>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:32:7: ( '-' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:32:9: '-'
             {
-            match("</Trigger>"); 
-
+            match('-'); 
 
             }
 
@@ -605,11 +535,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:36:7: ( '<BeliefSet>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:36:9: '<BeliefSet>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:33:7: ( '*' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:33:9: '*'
             {
-            match("<BeliefSet>"); 
-
+            match('*'); 
 
             }
 
@@ -626,11 +555,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:37:7: ( '</BeliefSet>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:37:9: '</BeliefSet>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:34:7: ( '/' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:34:9: '/'
             {
-            match("</BeliefSet>"); 
-
+            match('/'); 
 
             }
 
@@ -647,11 +575,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:38:7: ( '<Belief>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:38:9: '<Belief>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:35:7: ( '(' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:35:9: '('
             {
-            match("<Belief>"); 
-
+            match('('); 
 
             }
 
@@ -668,11 +595,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:39:7: ( '</Belief>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:39:9: '</Belief>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:36:7: ( ')' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:36:9: ')'
             {
-            match("</Belief>"); 
-
+            match(')'); 
 
             }
 
@@ -689,11 +615,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:40:7: ( '<Fact>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:40:9: '<Fact>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:37:7: ( '.' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:37:9: '.'
             {
-            match("<Fact>"); 
-
+            match('.'); 
 
             }
 
@@ -710,10 +635,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:41:7: ( '</Fact>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:41:9: '</Fact>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:38:7: ( 'Plans {' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:38:9: 'Plans {'
             {
-            match("</Fact>"); 
+            match("Plans {"); 
 
 
             }
@@ -731,10 +656,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:42:7: ( '<Achieve>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:42:9: '<Achieve>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:39:7: ( 'Plan {' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:39:9: 'Plan {'
             {
-            match("<Achieve>"); 
+            match("Plan {"); 
 
 
             }
@@ -752,10 +677,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:43:7: ( '</Achieve>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:43:9: '</Achieve>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:40:7: ( 'Body {' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:40:9: 'Body {'
             {
-            match("</Achieve>"); 
+            match("Body {"); 
 
 
             }
@@ -773,10 +698,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:44:7: ( '<Query>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:44:9: '<Query>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:41:7: ( 'Trigger {' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:41:9: 'Trigger {'
             {
-            match("<Query>"); 
+            match("Trigger {"); 
 
 
             }
@@ -794,10 +719,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:45:7: ( '</Query>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:45:9: '</Query>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:42:7: ( 'BeliefSet {' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:42:9: 'BeliefSet {'
             {
-            match("</Query>"); 
+            match("BeliefSet {"); 
 
 
             }
@@ -815,10 +740,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:46:7: ( '<Maintain>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:46:9: '<Maintain>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:43:7: ( 'Belief {' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:43:9: 'Belief {'
             {
-            match("<Maintain>"); 
+            match("Belief {"); 
 
 
             }
@@ -836,10 +761,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:47:7: ( '</Maintain>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:47:9: '</Maintain>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:44:7: ( 'Fact {' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:44:9: 'Fact {'
             {
-            match("</Maintain>"); 
+            match("Fact {"); 
 
 
             }
@@ -857,10 +782,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:48:7: ( '<Perform>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:48:9: '<Perform>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:45:7: ( 'Achieve {' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:45:9: 'Achieve {'
             {
-            match("<Perform>"); 
+            match("Achieve {"); 
 
 
             }
@@ -878,10 +803,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:49:7: ( '</Perform>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:49:9: '</Perform>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:46:7: ( 'Query {' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:46:9: 'Query {'
             {
-            match("</Perform>"); 
+            match("Query {"); 
 
 
             }
@@ -899,10 +824,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:50:7: ( '<Condition>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:50:9: '<Condition>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:47:7: ( 'Maintain {' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:47:9: 'Maintain {'
             {
-            match("<Condition>"); 
+            match("Maintain {"); 
 
 
             }
@@ -920,10 +845,10 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = T__51;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:51:7: ( '</Condition>' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:51:9: '</Condition>'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:48:7: ( 'Perform {' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:48:9: 'Perform {'
             {
-            match("</Condition>"); 
+            match("Perform {"); 
 
 
             }
@@ -936,24 +861,164 @@ public class InternalMyDslLexer extends Lexer {
     }
     // $ANTLR end "T__51"
 
+    // $ANTLR start "RULE_NETWORK"
+    public final void mRULE_NETWORK() throws RecognitionException {
+        try {
+            int _type = RULE_NETWORK;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2150:14: ( RULE_OCTET '.' RULE_OCTET '.' RULE_OCTET '.' RULE_OCTET )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2150:16: RULE_OCTET '.' RULE_OCTET '.' RULE_OCTET '.' RULE_OCTET
+            {
+            mRULE_OCTET(); 
+            match('.'); 
+            mRULE_OCTET(); 
+            match('.'); 
+            mRULE_OCTET(); 
+            match('.'); 
+            mRULE_OCTET(); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_NETWORK"
+
+    // $ANTLR start "RULE_OCTET"
+    public final void mRULE_OCTET() throws RecognitionException {
+        try {
+            int _type = RULE_OCTET;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2152:12: ( ( '0' .. '9' | '1' .. '9' '0' .. '9' | '1' '0' .. '9' '0' .. '9' | '2' '0' .. '5' '0' .. '5' ) )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2152:14: ( '0' .. '9' | '1' .. '9' '0' .. '9' | '1' '0' .. '9' '0' .. '9' | '2' '0' .. '5' '0' .. '5' )
+            {
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2152:14: ( '0' .. '9' | '1' .. '9' '0' .. '9' | '1' '0' .. '9' '0' .. '9' | '2' '0' .. '5' '0' .. '5' )
+            int alt1=4;
+            alt1 = dfa1.predict(input);
+            switch (alt1) {
+                case 1 :
+                    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2152:15: '0' .. '9'
+                    {
+                    matchRange('0','9'); 
+
+                    }
+                    break;
+                case 2 :
+                    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2152:24: '1' .. '9' '0' .. '9'
+                    {
+                    matchRange('1','9'); 
+                    matchRange('0','9'); 
+
+                    }
+                    break;
+                case 3 :
+                    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2152:42: '1' '0' .. '9' '0' .. '9'
+                    {
+                    match('1'); 
+                    matchRange('0','9'); 
+                    matchRange('0','9'); 
+
+                    }
+                    break;
+                case 4 :
+                    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2152:64: '2' '0' .. '5' '0' .. '5'
+                    {
+                    match('2'); 
+                    matchRange('0','5'); 
+                    matchRange('0','5'); 
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_OCTET"
+
+    // $ANTLR start "RULE_BOOLEAN"
+    public final void mRULE_BOOLEAN() throws RecognitionException {
+        try {
+            int _type = RULE_BOOLEAN;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2154:14: ( ( 'false' | 'true' ) )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2154:16: ( 'false' | 'true' )
+            {
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2154:16: ( 'false' | 'true' )
+            int alt2=2;
+            int LA2_0 = input.LA(1);
+
+            if ( (LA2_0=='f') ) {
+                alt2=1;
+            }
+            else if ( (LA2_0=='t') ) {
+                alt2=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 2, 0, input);
+
+                throw nvae;
+            }
+            switch (alt2) {
+                case 1 :
+                    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2154:17: 'false'
+                    {
+                    match("false"); 
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2154:25: 'true'
+                    {
+                    match("true"); 
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_BOOLEAN"
+
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1558:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1558:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2156:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2156:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1558:11: ( '^' )?
-            int alt1=2;
-            int LA1_0 = input.LA(1);
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2156:11: ( '^' )?
+            int alt3=2;
+            int LA3_0 = input.LA(1);
 
-            if ( (LA1_0=='^') ) {
-                alt1=1;
+            if ( (LA3_0=='^') ) {
+                alt3=1;
             }
-            switch (alt1) {
+            switch (alt3) {
                 case 1 :
-                    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1558:11: '^'
+                    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2156:11: '^'
                     {
                     match('^'); 
 
@@ -971,18 +1036,18 @@ public class InternalMyDslLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1558:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
-            loop2:
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2156:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            loop4:
             do {
-                int alt2=2;
-                int LA2_0 = input.LA(1);
+                int alt4=2;
+                int LA4_0 = input.LA(1);
 
-                if ( ((LA2_0>='0' && LA2_0<='9')||(LA2_0>='A' && LA2_0<='Z')||LA2_0=='_'||(LA2_0>='a' && LA2_0<='z')) ) {
-                    alt2=1;
+                if ( ((LA4_0>='0' && LA4_0<='9')||(LA4_0>='A' && LA4_0<='Z')||LA4_0=='_'||(LA4_0>='a' && LA4_0<='z')) ) {
+                    alt4=1;
                 }
 
 
-                switch (alt2) {
+                switch (alt4) {
             	case 1 :
             	    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:
             	    {
@@ -1000,7 +1065,7 @@ public class InternalMyDslLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop2;
+            	    break loop4;
                 }
             } while (true);
 
@@ -1020,24 +1085,24 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1560:10: ( ( '0' .. '9' )+ )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1560:12: ( '0' .. '9' )+
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2158:10: ( ( '0' .. '9' )+ )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2158:12: ( '0' .. '9' )+
             {
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1560:12: ( '0' .. '9' )+
-            int cnt3=0;
-            loop3:
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2158:12: ( '0' .. '9' )+
+            int cnt5=0;
+            loop5:
             do {
-                int alt3=2;
-                int LA3_0 = input.LA(1);
+                int alt5=2;
+                int LA5_0 = input.LA(1);
 
-                if ( ((LA3_0>='0' && LA3_0<='9')) ) {
-                    alt3=1;
+                if ( ((LA5_0>='0' && LA5_0<='9')) ) {
+                    alt5=1;
                 }
 
 
-                switch (alt3) {
+                switch (alt5) {
             	case 1 :
-            	    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1560:13: '0' .. '9'
+            	    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2158:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1045,12 +1110,12 @@ public class InternalMyDslLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt3 >= 1 ) break loop3;
+            	    if ( cnt5 >= 1 ) break loop5;
                         EarlyExitException eee =
-                            new EarlyExitException(3, input);
+                            new EarlyExitException(5, input);
                         throw eee;
                 }
-                cnt3++;
+                cnt5++;
             } while (true);
 
 
@@ -1069,47 +1134,47 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1562:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1562:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2160:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2160:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1562:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
-            int alt6=2;
-            int LA6_0 = input.LA(1);
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2160:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            if ( (LA6_0=='\"') ) {
-                alt6=1;
+            if ( (LA8_0=='\"') ) {
+                alt8=1;
             }
-            else if ( (LA6_0=='\'') ) {
-                alt6=2;
+            else if ( (LA8_0=='\'') ) {
+                alt8=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 6, 0, input);
+                    new NoViableAltException("", 8, 0, input);
 
                 throw nvae;
             }
-            switch (alt6) {
+            switch (alt8) {
                 case 1 :
-                    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1562:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2160:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1562:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
-                    loop4:
+                    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2160:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    loop6:
                     do {
-                        int alt4=3;
-                        int LA4_0 = input.LA(1);
+                        int alt6=3;
+                        int LA6_0 = input.LA(1);
 
-                        if ( (LA4_0=='\\') ) {
-                            alt4=1;
+                        if ( (LA6_0=='\\') ) {
+                            alt6=1;
                         }
-                        else if ( ((LA4_0>='\u0000' && LA4_0<='!')||(LA4_0>='#' && LA4_0<='[')||(LA4_0>=']' && LA4_0<='\uFFFF')) ) {
-                            alt4=2;
+                        else if ( ((LA6_0>='\u0000' && LA6_0<='!')||(LA6_0>='#' && LA6_0<='[')||(LA6_0>=']' && LA6_0<='\uFFFF')) ) {
+                            alt6=2;
                         }
 
 
-                        switch (alt4) {
+                        switch (alt6) {
                     	case 1 :
-                    	    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1562:21: '\\\\' .
+                    	    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2160:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1117,7 +1182,7 @@ public class InternalMyDslLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1562:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2160:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1133,7 +1198,7 @@ public class InternalMyDslLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    break loop4;
+                    	    break loop6;
                         }
                     } while (true);
 
@@ -1142,26 +1207,26 @@ public class InternalMyDslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1562:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2160:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1562:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
-                    loop5:
+                    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2160:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    loop7:
                     do {
-                        int alt5=3;
-                        int LA5_0 = input.LA(1);
+                        int alt7=3;
+                        int LA7_0 = input.LA(1);
 
-                        if ( (LA5_0=='\\') ) {
-                            alt5=1;
+                        if ( (LA7_0=='\\') ) {
+                            alt7=1;
                         }
-                        else if ( ((LA5_0>='\u0000' && LA5_0<='&')||(LA5_0>='(' && LA5_0<='[')||(LA5_0>=']' && LA5_0<='\uFFFF')) ) {
-                            alt5=2;
+                        else if ( ((LA7_0>='\u0000' && LA7_0<='&')||(LA7_0>='(' && LA7_0<='[')||(LA7_0>=']' && LA7_0<='\uFFFF')) ) {
+                            alt7=2;
                         }
 
 
-                        switch (alt5) {
+                        switch (alt7) {
                     	case 1 :
-                    	    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1562:54: '\\\\' .
+                    	    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2160:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1169,7 +1234,7 @@ public class InternalMyDslLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1562:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2160:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1185,7 +1250,7 @@ public class InternalMyDslLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    break loop5;
+                    	    break loop7;
                         }
                     } while (true);
 
@@ -1212,37 +1277,37 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1564:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1564:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2162:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2162:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1564:24: ( options {greedy=false; } : . )*
-            loop7:
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2162:24: ( options {greedy=false; } : . )*
+            loop9:
             do {
-                int alt7=2;
-                int LA7_0 = input.LA(1);
+                int alt9=2;
+                int LA9_0 = input.LA(1);
 
-                if ( (LA7_0=='*') ) {
-                    int LA7_1 = input.LA(2);
+                if ( (LA9_0=='*') ) {
+                    int LA9_1 = input.LA(2);
 
-                    if ( (LA7_1=='/') ) {
-                        alt7=2;
+                    if ( (LA9_1=='/') ) {
+                        alt9=2;
                     }
-                    else if ( ((LA7_1>='\u0000' && LA7_1<='.')||(LA7_1>='0' && LA7_1<='\uFFFF')) ) {
-                        alt7=1;
+                    else if ( ((LA9_1>='\u0000' && LA9_1<='.')||(LA9_1>='0' && LA9_1<='\uFFFF')) ) {
+                        alt9=1;
                     }
 
 
                 }
-                else if ( ((LA7_0>='\u0000' && LA7_0<=')')||(LA7_0>='+' && LA7_0<='\uFFFF')) ) {
-                    alt7=1;
+                else if ( ((LA9_0>='\u0000' && LA9_0<=')')||(LA9_0>='+' && LA9_0<='\uFFFF')) ) {
+                    alt9=1;
                 }
 
 
-                switch (alt7) {
+                switch (alt9) {
             	case 1 :
-            	    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1564:52: .
+            	    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2162:52: .
             	    {
             	    matchAny(); 
 
@@ -1250,7 +1315,7 @@ public class InternalMyDslLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop7;
+            	    break loop9;
                 }
             } while (true);
 
@@ -1272,25 +1337,25 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1566:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1566:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2164:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2164:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1566:24: (~ ( ( '\\n' | '\\r' ) ) )*
-            loop8:
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2164:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            loop10:
             do {
-                int alt8=2;
-                int LA8_0 = input.LA(1);
+                int alt10=2;
+                int LA10_0 = input.LA(1);
 
-                if ( ((LA8_0>='\u0000' && LA8_0<='\t')||(LA8_0>='\u000B' && LA8_0<='\f')||(LA8_0>='\u000E' && LA8_0<='\uFFFF')) ) {
-                    alt8=1;
+                if ( ((LA10_0>='\u0000' && LA10_0<='\t')||(LA10_0>='\u000B' && LA10_0<='\f')||(LA10_0>='\u000E' && LA10_0<='\uFFFF')) ) {
+                    alt10=1;
                 }
 
 
-                switch (alt8) {
+                switch (alt10) {
             	case 1 :
-            	    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1566:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2164:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1306,31 +1371,31 @@ public class InternalMyDslLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop8;
+            	    break loop10;
                 }
             } while (true);
 
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1566:40: ( ( '\\r' )? '\\n' )?
-            int alt10=2;
-            int LA10_0 = input.LA(1);
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2164:40: ( ( '\\r' )? '\\n' )?
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            if ( (LA10_0=='\n'||LA10_0=='\r') ) {
-                alt10=1;
+            if ( (LA12_0=='\n'||LA12_0=='\r') ) {
+                alt12=1;
             }
-            switch (alt10) {
+            switch (alt12) {
                 case 1 :
-                    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1566:41: ( '\\r' )? '\\n'
+                    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2164:41: ( '\\r' )? '\\n'
                     {
-                    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1566:41: ( '\\r' )?
-                    int alt9=2;
-                    int LA9_0 = input.LA(1);
+                    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2164:41: ( '\\r' )?
+                    int alt11=2;
+                    int LA11_0 = input.LA(1);
 
-                    if ( (LA9_0=='\r') ) {
-                        alt9=1;
+                    if ( (LA11_0=='\r') ) {
+                        alt11=1;
                     }
-                    switch (alt9) {
+                    switch (alt11) {
                         case 1 :
-                            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1566:41: '\\r'
+                            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2164:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1362,22 +1427,22 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1568:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1568:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2166:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2166:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1568:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
-            int cnt11=0;
-            loop11:
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2166:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            int cnt13=0;
+            loop13:
             do {
-                int alt11=2;
-                int LA11_0 = input.LA(1);
+                int alt13=2;
+                int LA13_0 = input.LA(1);
 
-                if ( ((LA11_0>='\t' && LA11_0<='\n')||LA11_0=='\r'||LA11_0==' ') ) {
-                    alt11=1;
+                if ( ((LA13_0>='\t' && LA13_0<='\n')||LA13_0=='\r'||LA13_0==' ') ) {
+                    alt13=1;
                 }
 
 
-                switch (alt11) {
+                switch (alt13) {
             	case 1 :
             	    // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:
             	    {
@@ -1395,12 +1460,12 @@ public class InternalMyDslLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt11 >= 1 ) break loop11;
+            	    if ( cnt13 >= 1 ) break loop13;
                         EarlyExitException eee =
-                            new EarlyExitException(11, input);
+                            new EarlyExitException(13, input);
                         throw eee;
                 }
-                cnt11++;
+                cnt13++;
             } while (true);
 
 
@@ -1419,8 +1484,8 @@ public class InternalMyDslLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1570:16: ( . )
-            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1570:18: .
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2168:16: ( . )
+            // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:2168:18: .
             {
             matchAny(); 
 
@@ -1435,341 +1500,341 @@ public class InternalMyDslLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=48;
-        alt12 = dfa12.predict(input);
-        switch (alt12) {
+        // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:8: ( T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | RULE_NETWORK | RULE_OCTET | RULE_BOOLEAN | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt14=48;
+        alt14 = dfa14.predict(input);
+        switch (alt14) {
             case 1 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:10: T__11
-                {
-                mT__11(); 
-
-                }
-                break;
-            case 2 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:16: T__12
-                {
-                mT__12(); 
-
-                }
-                break;
-            case 3 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:22: T__13
-                {
-                mT__13(); 
-
-                }
-                break;
-            case 4 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:28: T__14
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:10: T__14
                 {
                 mT__14(); 
 
                 }
                 break;
-            case 5 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:34: T__15
+            case 2 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:16: T__15
                 {
                 mT__15(); 
 
                 }
                 break;
-            case 6 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:40: T__16
+            case 3 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:22: T__16
                 {
                 mT__16(); 
 
                 }
                 break;
-            case 7 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:46: T__17
+            case 4 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:28: T__17
                 {
                 mT__17(); 
 
                 }
                 break;
-            case 8 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:52: T__18
+            case 5 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:34: T__18
                 {
                 mT__18(); 
 
                 }
                 break;
-            case 9 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:58: T__19
+            case 6 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:40: T__19
                 {
                 mT__19(); 
 
                 }
                 break;
-            case 10 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:64: T__20
+            case 7 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:46: T__20
                 {
                 mT__20(); 
 
                 }
                 break;
-            case 11 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:70: T__21
+            case 8 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:52: T__21
                 {
                 mT__21(); 
 
                 }
                 break;
-            case 12 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:76: T__22
+            case 9 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:58: T__22
                 {
                 mT__22(); 
 
                 }
                 break;
-            case 13 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:82: T__23
+            case 10 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:64: T__23
                 {
                 mT__23(); 
 
                 }
                 break;
-            case 14 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:88: T__24
+            case 11 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:70: T__24
                 {
                 mT__24(); 
 
                 }
                 break;
-            case 15 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:94: T__25
+            case 12 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:76: T__25
                 {
                 mT__25(); 
 
                 }
                 break;
-            case 16 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:100: T__26
+            case 13 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:82: T__26
                 {
                 mT__26(); 
 
                 }
                 break;
-            case 17 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:106: T__27
+            case 14 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:88: T__27
                 {
                 mT__27(); 
 
                 }
                 break;
-            case 18 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:112: T__28
+            case 15 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:94: T__28
                 {
                 mT__28(); 
 
                 }
                 break;
-            case 19 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:118: T__29
+            case 16 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:100: T__29
                 {
                 mT__29(); 
 
                 }
                 break;
-            case 20 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:124: T__30
+            case 17 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:106: T__30
                 {
                 mT__30(); 
 
                 }
                 break;
-            case 21 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:130: T__31
+            case 18 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:112: T__31
                 {
                 mT__31(); 
 
                 }
                 break;
-            case 22 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:136: T__32
+            case 19 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:118: T__32
                 {
                 mT__32(); 
 
                 }
                 break;
-            case 23 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:142: T__33
+            case 20 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:124: T__33
                 {
                 mT__33(); 
 
                 }
                 break;
-            case 24 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:148: T__34
+            case 21 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:130: T__34
                 {
                 mT__34(); 
 
                 }
                 break;
-            case 25 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:154: T__35
+            case 22 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:136: T__35
                 {
                 mT__35(); 
 
                 }
                 break;
-            case 26 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:160: T__36
+            case 23 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:142: T__36
                 {
                 mT__36(); 
 
                 }
                 break;
-            case 27 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:166: T__37
+            case 24 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:148: T__37
                 {
                 mT__37(); 
 
                 }
                 break;
-            case 28 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:172: T__38
+            case 25 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:154: T__38
                 {
                 mT__38(); 
 
                 }
                 break;
-            case 29 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:178: T__39
+            case 26 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:160: T__39
                 {
                 mT__39(); 
 
                 }
                 break;
-            case 30 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:184: T__40
+            case 27 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:166: T__40
                 {
                 mT__40(); 
 
                 }
                 break;
-            case 31 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:190: T__41
+            case 28 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:172: T__41
                 {
                 mT__41(); 
 
                 }
                 break;
-            case 32 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:196: T__42
+            case 29 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:178: T__42
                 {
                 mT__42(); 
 
                 }
                 break;
-            case 33 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:202: T__43
+            case 30 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:184: T__43
                 {
                 mT__43(); 
 
                 }
                 break;
-            case 34 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:208: T__44
+            case 31 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:190: T__44
                 {
                 mT__44(); 
 
                 }
                 break;
-            case 35 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:214: T__45
+            case 32 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:196: T__45
                 {
                 mT__45(); 
 
                 }
                 break;
-            case 36 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:220: T__46
+            case 33 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:202: T__46
                 {
                 mT__46(); 
 
                 }
                 break;
-            case 37 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:226: T__47
+            case 34 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:208: T__47
                 {
                 mT__47(); 
 
                 }
                 break;
-            case 38 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:232: T__48
+            case 35 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:214: T__48
                 {
                 mT__48(); 
 
                 }
                 break;
-            case 39 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:238: T__49
+            case 36 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:220: T__49
                 {
                 mT__49(); 
 
                 }
                 break;
-            case 40 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:244: T__50
+            case 37 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:226: T__50
                 {
                 mT__50(); 
 
                 }
                 break;
-            case 41 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:250: T__51
+            case 38 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:232: T__51
                 {
                 mT__51(); 
 
                 }
                 break;
+            case 39 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:238: RULE_NETWORK
+                {
+                mRULE_NETWORK(); 
+
+                }
+                break;
+            case 40 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:251: RULE_OCTET
+                {
+                mRULE_OCTET(); 
+
+                }
+                break;
+            case 41 :
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:262: RULE_BOOLEAN
+                {
+                mRULE_BOOLEAN(); 
+
+                }
+                break;
             case 42 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:256: RULE_ID
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:275: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
             case 43 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:264: RULE_INT
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:283: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
             case 44 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:273: RULE_STRING
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:292: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
             case 45 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:285: RULE_ML_COMMENT
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:304: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
             case 46 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:301: RULE_SL_COMMENT
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:320: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
             case 47 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:317: RULE_WS
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:336: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
             case 48 :
-                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:325: RULE_ANY_OTHER
+                // ../bdi.xtext.example.mydsl/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalMyDsl.g:1:344: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1781,240 +1846,451 @@ public class InternalMyDslLexer extends Lexer {
     }
 
 
-    protected DFA12 dfa12 = new DFA12(this);
-    static final String DFA12_eotS =
-        "\1\uffff\2\11\2\uffff\3\11\151\uffff";
-    static final String DFA12_eofS =
-        "\161\uffff";
-    static final String DFA12_minS =
-        "\1\0\1\57\1\101\2\uffff\2\0\1\52\2\uffff\1\104\1\101\1\143\1\155"+
-        "\1\uffff\1\141\16\uffff\1\154\1\104\1\143\1\155\1\166\1\141\10\uffff"+
-        "\1\160\1\162\1\141\1\uffff\1\151\2\uffff\1\154\2\uffff\1\160\1\145"+
-        "\1\162\1\141\1\uffff\1\157\1\141\1\156\1\145\1\151\1\157\1\156\1"+
-        "\141\1\156\1\162\1\155\1\76\1\146\1\145\1\162\1\164\1\155\1\76\1"+
-        "\164\1\145\2\uffff\1\76\1\146\1\164\1\76\1\145\2\uffff\1\76\1\164"+
-        "\2\uffff\2\76\2\uffff\1\164\2\uffff\1\145\4\uffff\1\145\2\162\2"+
-        "\76\4\uffff";
-    static final String DFA12_maxS =
-        "\1\uffff\1\126\1\172\2\uffff\2\uffff\1\57\2\uffff\1\157\1\126\1"+
-        "\147\1\155\1\uffff\1\154\16\uffff\1\154\1\157\1\147\1\155\1\166"+
-        "\1\154\10\uffff\1\160\1\162\1\141\1\uffff\1\151\2\uffff\1\154\2"+
-        "\uffff\1\160\1\145\1\162\1\141\1\uffff\1\157\1\141\1\156\1\145\1"+
-        "\151\1\157\1\156\1\141\1\156\1\162\1\155\1\163\1\146\1\145\1\162"+
-        "\1\164\1\155\1\163\1\164\1\145\2\uffff\1\123\1\146\1\164\1\163\1"+
-        "\145\2\uffff\1\163\1\164\2\uffff\1\123\1\163\2\uffff\1\164\2\uffff"+
-        "\1\145\4\uffff\1\145\2\162\2\163\4\uffff";
-    static final String DFA12_acceptS =
-        "\3\uffff\1\52\1\53\3\uffff\1\57\1\60\4\uffff\1\11\1\uffff\1\20"+
-        "\1\30\1\36\1\42\1\44\1\50\1\52\1\53\1\54\1\55\1\56\1\57\1\1\1\26"+
-        "\6\uffff\1\21\1\31\1\37\1\43\1\45\1\51\1\3\1\40\3\uffff\1\46\1\uffff"+
-        "\1\2\1\27\1\uffff\1\4\1\41\4\uffff\1\47\24\uffff\1\22\1\24\5\uffff"+
-        "\1\23\1\25\2\uffff\1\32\1\34\2\uffff\1\12\1\13\1\uffff\1\5\1\7\1"+
-        "\uffff\1\33\1\35\1\6\1\10\5\uffff\1\14\1\16\1\15\1\17";
-    static final String DFA12_specialS =
-        "\1\2\4\uffff\1\1\1\0\152\uffff}>";
-    static final String[] DFA12_transitionS = {
-            "\11\11\2\10\2\11\1\10\22\11\1\10\1\11\1\5\4\11\1\6\7\11\1\7"+
-            "\12\4\2\11\1\1\4\11\32\3\3\11\1\2\1\3\1\11\32\3\uff85\11",
-            "\1\13\21\uffff\1\14\1\12\1\25\1\uffff\1\16\1\22\2\uffff\1"+
-            "\15\3\uffff\1\24\2\uffff\1\17\1\23\2\uffff\1\21\1\uffff\1\20",
-            "\32\26\4\uffff\1\26\1\uffff\32\26",
+    protected DFA1 dfa1 = new DFA1(this);
+    protected DFA14 dfa14 = new DFA14(this);
+    static final String DFA1_eotS =
+        "\1\uffff\1\2\1\uffff\2\2\2\7\3\uffff";
+    static final String DFA1_eofS =
+        "\12\uffff";
+    static final String DFA1_minS =
+        "\2\60\1\uffff\4\60\3\uffff";
+    static final String DFA1_maxS =
+        "\2\71\1\uffff\3\71\1\65\3\uffff";
+    static final String DFA1_acceptS =
+        "\2\uffff\1\1\4\uffff\1\2\1\3\1\4";
+    static final String DFA1_specialS =
+        "\12\uffff}>";
+    static final String[] DFA1_transitionS = {
+            "\1\2\1\1\1\3\7\4",
+            "\12\5",
             "",
-            "",
-            "\0\30",
-            "\0\30",
-            "\1\31\4\uffff\1\32",
-            "",
-            "",
-            "\1\34\40\uffff\1\36\11\uffff\1\35",
-            "\1\40\1\37\1\51\1\uffff\1\42\1\46\2\uffff\1\41\3\uffff\1\50"+
-            "\2\uffff\1\43\1\47\2\uffff\1\45\1\uffff\1\44",
-            "\1\53\3\uffff\1\52",
-            "\1\54",
-            "",
-            "\1\55\3\uffff\1\57\6\uffff\1\56",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\60",
-            "\1\61\40\uffff\1\63\11\uffff\1\62",
-            "\1\65\3\uffff\1\64",
-            "\1\66",
-            "\1\67",
-            "\1\70\3\uffff\1\72\6\uffff\1\71",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\73",
-            "\1\74",
-            "\1\75",
-            "",
-            "\1\76",
-            "",
-            "",
-            "\1\77",
-            "",
-            "",
-            "\1\100",
-            "\1\101",
-            "\1\102",
-            "\1\103",
-            "",
-            "\1\104",
-            "\1\105",
-            "\1\106",
-            "\1\107",
-            "\1\110",
-            "\1\111",
-            "\1\112",
-            "\1\113",
-            "\1\114",
-            "\1\115",
-            "\1\116",
-            "\1\120\64\uffff\1\117",
-            "\1\121",
-            "\1\122",
-            "\1\123",
-            "\1\124",
-            "\1\125",
-            "\1\127\64\uffff\1\126",
-            "\1\130",
-            "\1\131",
-            "",
-            "",
-            "\1\133\24\uffff\1\132",
-            "\1\134",
-            "\1\135",
-            "\1\137\64\uffff\1\136",
-            "\1\140",
-            "",
-            "",
-            "\1\142\64\uffff\1\141",
-            "\1\143",
-            "",
-            "",
-            "\1\145\24\uffff\1\144",
-            "\1\147\64\uffff\1\146",
-            "",
-            "",
-            "\1\150",
-            "",
-            "",
-            "\1\151",
-            "",
-            "",
-            "",
-            "",
-            "\1\152",
-            "\1\153",
-            "\1\154",
-            "\1\156\64\uffff\1\155",
-            "\1\160\64\uffff\1\157",
-            "",
+            "\6\6\4\7",
+            "\12\7",
+            "\12\10",
+            "\6\11",
             "",
             "",
             ""
     };
 
-    static final short[] DFA12_eot = DFA.unpackEncodedString(DFA12_eotS);
-    static final short[] DFA12_eof = DFA.unpackEncodedString(DFA12_eofS);
-    static final char[] DFA12_min = DFA.unpackEncodedStringToUnsignedChars(DFA12_minS);
-    static final char[] DFA12_max = DFA.unpackEncodedStringToUnsignedChars(DFA12_maxS);
-    static final short[] DFA12_accept = DFA.unpackEncodedString(DFA12_acceptS);
-    static final short[] DFA12_special = DFA.unpackEncodedString(DFA12_specialS);
-    static final short[][] DFA12_transition;
+    static final short[] DFA1_eot = DFA.unpackEncodedString(DFA1_eotS);
+    static final short[] DFA1_eof = DFA.unpackEncodedString(DFA1_eofS);
+    static final char[] DFA1_min = DFA.unpackEncodedStringToUnsignedChars(DFA1_minS);
+    static final char[] DFA1_max = DFA.unpackEncodedStringToUnsignedChars(DFA1_maxS);
+    static final short[] DFA1_accept = DFA.unpackEncodedString(DFA1_acceptS);
+    static final short[] DFA1_special = DFA.unpackEncodedString(DFA1_specialS);
+    static final short[][] DFA1_transition;
 
     static {
-        int numStates = DFA12_transitionS.length;
-        DFA12_transition = new short[numStates][];
+        int numStates = DFA1_transitionS.length;
+        DFA1_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA12_transition[i] = DFA.unpackEncodedString(DFA12_transitionS[i]);
+            DFA1_transition[i] = DFA.unpackEncodedString(DFA1_transitionS[i]);
         }
     }
 
-    class DFA12 extends DFA {
+    class DFA1 extends DFA {
 
-        public DFA12(BaseRecognizer recognizer) {
+        public DFA1(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 12;
-            this.eot = DFA12_eot;
-            this.eof = DFA12_eof;
-            this.min = DFA12_min;
-            this.max = DFA12_max;
-            this.accept = DFA12_accept;
-            this.special = DFA12_special;
-            this.transition = DFA12_transition;
+            this.decisionNumber = 1;
+            this.eot = DFA1_eot;
+            this.eof = DFA1_eof;
+            this.min = DFA1_min;
+            this.max = DFA1_max;
+            this.accept = DFA1_accept;
+            this.special = DFA1_special;
+            this.transition = DFA1_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "2152:14: ( '0' .. '9' | '1' .. '9' '0' .. '9' | '1' '0' .. '9' '0' .. '9' | '2' '0' .. '5' '0' .. '5' )";
+        }
+    }
+    static final String DFA14_eotS =
+        "\1\uffff\1\51\1\uffff\1\51\1\uffff\3\51\1\64\1\51\1\67\1\71\1\45"+
+        "\2\51\3\uffff\1\102\3\uffff\4\51\4\113\2\51\1\45\1\uffff\2\45\2"+
+        "\uffff\3\51\2\uffff\2\51\1\uffff\5\51\2\uffff\1\51\5\uffff\1\51"+
+        "\1\140\11\uffff\4\51\1\113\3\uffff\2\113\2\51\2\uffff\13\51\1\164"+
+        "\1\uffff\4\51\2\113\15\51\1\uffff\5\51\1\u008c\1\51\1\uffff\1\51"+
+        "\1\u008f\2\51\1\u0093\2\51\1\uffff\3\51\1\uffff\2\51\1\u008c\1\uffff"+
+        "\2\51\1\uffff\3\51\1\uffff\1\51\1\uffff\1\51\1\uffff\1\51\1\uffff"+
+        "\3\51\1\uffff\2\51\2\uffff\6\51\2\uffff\1\51\2\uffff\1\51\1\uffff"+
+        "\2\51\2\uffff\1\51\2\uffff";
+    static final String DFA14_eofS =
+        "\u00b6\uffff";
+    static final String DFA14_minS =
+        "\1\0\1\104\1\uffff\1\143\1\uffff\1\155\1\166\1\141\1\75\1\141\3"+
+        "\75\1\156\1\162\3\uffff\1\52\3\uffff\1\162\1\141\1\165\1\141\4\56"+
+        "\1\141\1\162\1\101\1\uffff\2\0\2\uffff\1\111\1\144\1\154\2\uffff"+
+        "\1\145\1\150\1\uffff\1\160\1\145\1\162\1\141\1\162\2\uffff\1\154"+
+        "\5\uffff\1\144\1\60\11\uffff\1\151\1\143\1\145\1\151\1\56\3\uffff"+
+        "\2\56\1\154\1\165\2\uffff\1\115\1\171\1\151\1\156\1\151\1\157\1"+
+        "\156\1\141\1\156\1\146\1\165\1\60\1\uffff\1\147\1\164\1\162\1\156"+
+        "\2\56\1\163\1\145\1\157\1\40\1\145\1\164\1\145\1\162\1\164\1\155"+
+        "\1\40\1\157\1\145\1\uffff\1\147\1\40\1\171\1\164\1\145\1\60\1\144"+
+        "\1\uffff\1\146\1\60\1\166\1\164\1\60\1\145\1\40\1\uffff\1\162\1"+
+        "\40\1\145\1\uffff\1\40\1\141\1\60\1\uffff\1\145\1\40\1\uffff\1\145"+
+        "\2\40\1\uffff\1\164\1\uffff\1\155\1\uffff\1\162\1\uffff\1\151\1"+
+        "\154\1\145\1\uffff\2\40\2\uffff\1\145\2\40\1\156\1\40\1\164\2\uffff"+
+        "\1\162\2\uffff\1\40\1\uffff\2\40\2\uffff\1\40\2\uffff";
+    static final String DFA14_maxS =
+        "\1\uffff\1\157\1\uffff\1\147\1\uffff\1\155\1\166\1\154\1\75\1\141"+
+        "\3\75\1\156\1\162\3\uffff\1\57\3\uffff\1\162\1\141\1\165\1\141\4"+
+        "\71\1\141\1\162\1\172\1\uffff\2\uffff\2\uffff\1\111\1\144\1\154"+
+        "\2\uffff\1\145\1\150\1\uffff\1\160\1\145\1\162\1\141\1\162\2\uffff"+
+        "\1\154\5\uffff\1\144\1\172\11\uffff\1\151\1\143\1\145\1\151\1\71"+
+        "\3\uffff\2\71\1\154\1\165\2\uffff\1\115\1\171\1\151\1\156\1\151"+
+        "\1\157\1\156\1\141\1\156\1\146\1\165\1\172\1\uffff\1\147\1\164\1"+
+        "\162\1\156\2\71\1\163\1\145\1\157\1\40\1\145\1\164\1\145\1\162\1"+
+        "\164\1\155\1\163\1\157\1\145\1\uffff\1\147\1\40\1\171\1\164\1\145"+
+        "\1\172\1\144\1\uffff\1\146\1\172\1\166\1\164\1\172\1\145\1\40\1"+
+        "\uffff\1\162\1\40\1\145\1\uffff\1\40\1\141\1\172\1\uffff\1\145\1"+
+        "\123\1\uffff\1\145\1\163\1\40\1\uffff\1\164\1\uffff\1\155\1\uffff"+
+        "\1\162\1\uffff\1\151\1\154\1\145\1\uffff\2\40\2\uffff\1\145\2\40"+
+        "\1\156\1\40\1\164\2\uffff\1\162\2\uffff\1\40\1\uffff\1\40\1\163"+
+        "\2\uffff\1\40\2\uffff";
+    static final String DFA14_acceptS =
+        "\2\uffff\1\2\1\uffff\1\4\12\uffff\1\25\1\26\1\27\1\uffff\1\31\1"+
+        "\32\1\33\13\uffff\1\52\2\uffff\1\57\1\60\3\uffff\1\52\1\2\2\uffff"+
+        "\1\4\5\uffff\1\15\1\13\1\uffff\1\20\1\16\1\21\1\17\1\22\2\uffff"+
+        "\1\25\1\26\1\27\1\55\1\56\1\30\1\31\1\32\1\33\5\uffff\1\50\1\47"+
+        "\1\53\4\uffff\1\54\1\57\14\uffff\1\24\23\uffff\1\23\7\uffff\1\36"+
+        "\7\uffff\1\35\3\uffff\1\42\3\uffff\1\51\2\uffff\1\3\3\uffff\1\10"+
+        "\1\uffff\1\34\1\uffff\1\14\1\uffff\1\44\3\uffff\1\41\2\uffff\1\6"+
+        "\1\7\6\uffff\1\43\1\5\1\uffff\1\46\1\37\1\uffff\1\1\2\uffff\1\45"+
+        "\1\40\1\uffff\1\12\1\11";
+    static final String DFA14_specialS =
+        "\1\0\41\uffff\1\2\1\1\u0092\uffff}>";
+    static final String[] DFA14_transitionS = {
+            "\11\45\2\44\2\45\1\44\22\45\1\44\1\14\1\42\4\45\1\43\1\23\1"+
+            "\24\1\21\1\17\1\45\1\20\1\25\1\22\1\33\1\32\1\34\7\35\2\45\1"+
+            "\13\1\10\1\12\2\45\1\3\1\1\2\41\1\6\1\27\2\41\1\5\3\41\1\31"+
+            "\2\41\1\7\1\30\2\41\1\26\1\41\1\11\4\41\3\45\1\40\1\41\1\45"+
+            "\1\15\4\41\1\36\10\41\1\16\4\41\1\37\6\41\1\4\1\45\1\2\uff82"+
+            "\45",
+            "\1\46\40\uffff\1\50\11\uffff\1\47",
+            "",
+            "\1\54\3\uffff\1\53",
+            "",
+            "\1\56",
+            "\1\57",
+            "\1\60\3\uffff\1\62\6\uffff\1\61",
+            "\1\63",
+            "\1\65",
+            "\1\66",
+            "\1\70",
+            "\1\72",
+            "\1\73",
+            "\1\74",
+            "",
+            "",
+            "",
+            "\1\100\4\uffff\1\101",
+            "",
+            "",
+            "",
+            "\1\106",
+            "\1\107",
+            "\1\110",
+            "\1\111",
+            "\1\114\1\uffff\12\112",
+            "\1\114\1\uffff\12\115",
+            "\1\114\1\uffff\6\116\4\117",
+            "\1\114\1\uffff\12\117",
+            "\1\120",
+            "\1\121",
+            "\32\51\4\uffff\1\51\1\uffff\32\51",
+            "",
+            "\0\122",
+            "\0\122",
+            "",
+            "",
+            "\1\124",
+            "\1\125",
+            "\1\126",
+            "",
+            "",
+            "\1\127",
+            "\1\130",
+            "",
+            "\1\131",
+            "\1\132",
+            "\1\133",
+            "\1\134",
+            "\1\135",
+            "",
+            "",
+            "\1\136",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\137",
+            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\141",
+            "\1\142",
+            "\1\143",
+            "\1\144",
+            "\1\114\1\uffff\12\145",
+            "",
+            "",
+            "",
+            "\1\114\1\uffff\6\146\4\115",
+            "\1\114\1\uffff\12\115",
+            "\1\147",
+            "\1\150",
+            "",
+            "",
+            "\1\151",
+            "\1\152",
+            "\1\153",
+            "\1\154",
+            "\1\155",
+            "\1\156",
+            "\1\157",
+            "\1\160",
+            "\1\161",
+            "\1\162",
+            "\1\163",
+            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "",
+            "\1\165",
+            "\1\166",
+            "\1\167",
+            "\1\170",
+            "\1\114\1\uffff\12\115",
+            "\1\114\1\uffff\12\115",
+            "\1\171",
+            "\1\172",
+            "\1\173",
+            "\1\174",
+            "\1\175",
+            "\1\176",
+            "\1\177",
+            "\1\u0080",
+            "\1\u0081",
+            "\1\u0082",
+            "\1\u0084\122\uffff\1\u0083",
+            "\1\u0085",
+            "\1\u0086",
+            "",
+            "\1\u0087",
+            "\1\u0088",
+            "\1\u0089",
+            "\1\u008a",
+            "\1\u008b",
+            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\1\u008d",
+            "",
+            "\1\u008e",
+            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "\1\u0090",
+            "\1\u0091",
+            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\22\51\1\u0092\7"+
+            "\51",
+            "\1\u0094",
+            "\1\u0095",
+            "",
+            "\1\u0096",
+            "\1\u0097",
+            "\1\u0098",
+            "",
+            "\1\u0099",
+            "\1\u009a",
+            "\12\51\7\uffff\32\51\4\uffff\1\51\1\uffff\32\51",
+            "",
+            "\1\u009b",
+            "\1\u009d\62\uffff\1\u009c",
+            "",
+            "\1\u009e",
+            "\1\u00a0\122\uffff\1\u009f",
+            "\1\u00a1",
+            "",
+            "\1\u00a2",
+            "",
+            "\1\u00a3",
+            "",
+            "\1\u00a4",
+            "",
+            "\1\u00a5",
+            "\1\u00a6",
+            "\1\u00a7",
+            "",
+            "\1\u00a8",
+            "\1\u00a9",
+            "",
+            "",
+            "\1\u00aa",
+            "\1\u00ab",
+            "\1\u00ac",
+            "\1\u00ad",
+            "\1\u00ae",
+            "\1\u00af",
+            "",
+            "",
+            "\1\u00b0",
+            "",
+            "",
+            "\1\u00b1",
+            "",
+            "\1\u00b2",
+            "\1\u00b4\122\uffff\1\u00b3",
+            "",
+            "",
+            "\1\u00b5",
+            "",
+            ""
+    };
+
+    static final short[] DFA14_eot = DFA.unpackEncodedString(DFA14_eotS);
+    static final short[] DFA14_eof = DFA.unpackEncodedString(DFA14_eofS);
+    static final char[] DFA14_min = DFA.unpackEncodedStringToUnsignedChars(DFA14_minS);
+    static final char[] DFA14_max = DFA.unpackEncodedStringToUnsignedChars(DFA14_maxS);
+    static final short[] DFA14_accept = DFA.unpackEncodedString(DFA14_acceptS);
+    static final short[] DFA14_special = DFA.unpackEncodedString(DFA14_specialS);
+    static final short[][] DFA14_transition;
+
+    static {
+        int numStates = DFA14_transitionS.length;
+        DFA14_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA14_transition[i] = DFA.unpackEncodedString(DFA14_transitionS[i]);
+        }
+    }
+
+    class DFA14 extends DFA {
+
+        public DFA14(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 14;
+            this.eot = DFA14_eot;
+            this.eof = DFA14_eof;
+            this.min = DFA14_min;
+            this.max = DFA14_max;
+            this.accept = DFA14_accept;
+            this.special = DFA14_special;
+            this.transition = DFA14_transition;
+        }
+        public String getDescription() {
+            return "1:1: Tokens : ( T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | RULE_NETWORK | RULE_OCTET | RULE_BOOLEAN | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA12_6 = input.LA(1);
+                        int LA14_0 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_6>='\u0000' && LA12_6<='\uFFFF')) ) {s = 24;}
+                        if ( (LA14_0=='B') ) {s = 1;}
 
-                        else s = 9;
+                        else if ( (LA14_0=='}') ) {s = 2;}
+
+                        else if ( (LA14_0=='A') ) {s = 3;}
+
+                        else if ( (LA14_0=='{') ) {s = 4;}
+
+                        else if ( (LA14_0=='I') ) {s = 5;}
+
+                        else if ( (LA14_0=='E') ) {s = 6;}
+
+                        else if ( (LA14_0=='P') ) {s = 7;}
+
+                        else if ( (LA14_0=='=') ) {s = 8;}
+
+                        else if ( (LA14_0=='V') ) {s = 9;}
+
+                        else if ( (LA14_0=='>') ) {s = 10;}
+
+                        else if ( (LA14_0=='<') ) {s = 11;}
+
+                        else if ( (LA14_0=='!') ) {s = 12;}
+
+                        else if ( (LA14_0=='a') ) {s = 13;}
+
+                        else if ( (LA14_0=='o') ) {s = 14;}
+
+                        else if ( (LA14_0=='+') ) {s = 15;}
+
+                        else if ( (LA14_0=='-') ) {s = 16;}
+
+                        else if ( (LA14_0=='*') ) {s = 17;}
+
+                        else if ( (LA14_0=='/') ) {s = 18;}
+
+                        else if ( (LA14_0=='(') ) {s = 19;}
+
+                        else if ( (LA14_0==')') ) {s = 20;}
+
+                        else if ( (LA14_0=='.') ) {s = 21;}
+
+                        else if ( (LA14_0=='T') ) {s = 22;}
+
+                        else if ( (LA14_0=='F') ) {s = 23;}
+
+                        else if ( (LA14_0=='Q') ) {s = 24;}
+
+                        else if ( (LA14_0=='M') ) {s = 25;}
+
+                        else if ( (LA14_0=='1') ) {s = 26;}
+
+                        else if ( (LA14_0=='0') ) {s = 27;}
+
+                        else if ( (LA14_0=='2') ) {s = 28;}
+
+                        else if ( ((LA14_0>='3' && LA14_0<='9')) ) {s = 29;}
+
+                        else if ( (LA14_0=='f') ) {s = 30;}
+
+                        else if ( (LA14_0=='t') ) {s = 31;}
+
+                        else if ( (LA14_0=='^') ) {s = 32;}
+
+                        else if ( ((LA14_0>='C' && LA14_0<='D')||(LA14_0>='G' && LA14_0<='H')||(LA14_0>='J' && LA14_0<='L')||(LA14_0>='N' && LA14_0<='O')||(LA14_0>='R' && LA14_0<='S')||LA14_0=='U'||(LA14_0>='W' && LA14_0<='Z')||LA14_0=='_'||(LA14_0>='b' && LA14_0<='e')||(LA14_0>='g' && LA14_0<='n')||(LA14_0>='p' && LA14_0<='s')||(LA14_0>='u' && LA14_0<='z')) ) {s = 33;}
+
+                        else if ( (LA14_0=='\"') ) {s = 34;}
+
+                        else if ( (LA14_0=='\'') ) {s = 35;}
+
+                        else if ( ((LA14_0>='\t' && LA14_0<='\n')||LA14_0=='\r'||LA14_0==' ') ) {s = 36;}
+
+                        else if ( ((LA14_0>='\u0000' && LA14_0<='\b')||(LA14_0>='\u000B' && LA14_0<='\f')||(LA14_0>='\u000E' && LA14_0<='\u001F')||(LA14_0>='#' && LA14_0<='&')||LA14_0==','||(LA14_0>=':' && LA14_0<=';')||(LA14_0>='?' && LA14_0<='@')||(LA14_0>='[' && LA14_0<=']')||LA14_0=='`'||LA14_0=='|'||(LA14_0>='~' && LA14_0<='\uFFFF')) ) {s = 37;}
 
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA12_5 = input.LA(1);
+                        int LA14_35 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_5>='\u0000' && LA12_5<='\uFFFF')) ) {s = 24;}
+                        if ( ((LA14_35>='\u0000' && LA14_35<='\uFFFF')) ) {s = 82;}
 
-                        else s = 9;
+                        else s = 37;
 
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA12_0 = input.LA(1);
+                        int LA14_34 = input.LA(1);
 
                         s = -1;
-                        if ( (LA12_0=='<') ) {s = 1;}
+                        if ( ((LA14_34>='\u0000' && LA14_34<='\uFFFF')) ) {s = 82;}
 
-                        else if ( (LA12_0=='^') ) {s = 2;}
-
-                        else if ( ((LA12_0>='A' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='z')) ) {s = 3;}
-
-                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 4;}
-
-                        else if ( (LA12_0=='\"') ) {s = 5;}
-
-                        else if ( (LA12_0=='\'') ) {s = 6;}
-
-                        else if ( (LA12_0=='/') ) {s = 7;}
-
-                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 8;}
-
-                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='.')||(LA12_0>=':' && LA12_0<=';')||(LA12_0>='=' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||(LA12_0>='{' && LA12_0<='\uFFFF')) ) {s = 9;}
+                        else s = 37;
 
                         if ( s>=0 ) return s;
                         break;
             }
             NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 12, _s, input);
+                new NoViableAltException(getDescription(), 14, _s, input);
             error(nvae);
             throw nvae;
         }

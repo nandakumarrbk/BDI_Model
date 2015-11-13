@@ -71,6 +71,11 @@ public class MyDslFactoryImpl extends EFactoryImpl implements MyDslFactory
       case MyDslPackage.EVENT: return createEvent();
       case MyDslPackage.PARAMETERS: return createParameters();
       case MyDslPackage.PARAMETER: return createParameter();
+      case MyDslPackage.OPERATOR: return createOperator();
+      case MyDslPackage.CONDITION: return createCondition();
+      case MyDslPackage.EXPRESSION: return createExpression();
+      case MyDslPackage.TERM: return createTerm();
+      case MyDslPackage.FACTOR: return createFactor();
       case MyDslPackage.PLANS: return createPlans();
       case MyDslPackage.PLAN: return createPlan();
       case MyDslPackage.TRIGGER: return createTrigger();
@@ -84,7 +89,10 @@ public class MyDslFactoryImpl extends EFactoryImpl implements MyDslFactory
       case MyDslPackage.QUERY: return createQuery();
       case MyDslPackage.MAINTAIN: return createMaintain();
       case MyDslPackage.PERFORM: return createPerform();
-      case MyDslPackage.CONDITION: return createCondition();
+      case MyDslPackage.PLUS: return createPlus();
+      case MyDslPackage.MINUS: return createMinus();
+      case MyDslPackage.MULTIPLY: return createMultiply();
+      case MyDslPackage.DIVISION: return createDivision();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -165,6 +173,61 @@ public class MyDslFactoryImpl extends EFactoryImpl implements MyDslFactory
   {
     ParameterImpl parameter = new ParameterImpl();
     return parameter;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Operator createOperator()
+  {
+    OperatorImpl operator = new OperatorImpl();
+    return operator;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Condition createCondition()
+  {
+    ConditionImpl condition = new ConditionImpl();
+    return condition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Expression createExpression()
+  {
+    ExpressionImpl expression = new ExpressionImpl();
+    return expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Term createTerm()
+  {
+    TermImpl term = new TermImpl();
+    return term;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Factor createFactor()
+  {
+    FactorImpl factor = new FactorImpl();
+    return factor;
   }
 
   /**
@@ -315,10 +378,43 @@ public class MyDslFactoryImpl extends EFactoryImpl implements MyDslFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Condition createCondition()
+  public Plus createPlus()
   {
-    ConditionImpl condition = new ConditionImpl();
-    return condition;
+    PlusImpl plus = new PlusImpl();
+    return plus;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Minus createMinus()
+  {
+    MinusImpl minus = new MinusImpl();
+    return minus;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Multiply createMultiply()
+  {
+    MultiplyImpl multiply = new MultiplyImpl();
+    return multiply;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Division createDivision()
+  {
+    DivisionImpl division = new DivisionImpl();
+    return division;
   }
 
   /**

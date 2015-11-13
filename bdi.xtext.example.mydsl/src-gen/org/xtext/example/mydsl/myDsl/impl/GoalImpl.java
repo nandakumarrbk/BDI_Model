@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.example.mydsl.myDsl.Condition;
 import org.xtext.example.mydsl.myDsl.Goal;
@@ -22,13 +23,34 @@ import org.xtext.example.mydsl.myDsl.MyDslPackage;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.xtext.example.mydsl.myDsl.impl.GoalImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.myDsl.impl.GoalImpl#getCondition <em>Condition</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GoalImpl extends TriggerImpl implements Goal
+public class GoalImpl extends MinimalEObjectImpl.Container implements Goal
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getCondition() <em>Condition</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -58,6 +80,29 @@ public class GoalImpl extends TriggerImpl implements Goal
   protected EClass eStaticClass()
   {
     return MyDslPackage.Literals.GOAL;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MyDslPackage.GOAL__NAME, oldName, name));
   }
 
   /**
@@ -134,6 +179,8 @@ public class GoalImpl extends TriggerImpl implements Goal
   {
     switch (featureID)
     {
+      case MyDslPackage.GOAL__NAME:
+        return getName();
       case MyDslPackage.GOAL__CONDITION:
         return getCondition();
     }
@@ -150,6 +197,9 @@ public class GoalImpl extends TriggerImpl implements Goal
   {
     switch (featureID)
     {
+      case MyDslPackage.GOAL__NAME:
+        setName((String)newValue);
+        return;
       case MyDslPackage.GOAL__CONDITION:
         setCondition((Condition)newValue);
         return;
@@ -167,6 +217,9 @@ public class GoalImpl extends TriggerImpl implements Goal
   {
     switch (featureID)
     {
+      case MyDslPackage.GOAL__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case MyDslPackage.GOAL__CONDITION:
         setCondition((Condition)null);
         return;
@@ -184,10 +237,29 @@ public class GoalImpl extends TriggerImpl implements Goal
   {
     switch (featureID)
     {
+      case MyDslPackage.GOAL__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case MyDslPackage.GOAL__CONDITION:
         return condition != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(')');
+    return result.toString();
   }
 
 } //GoalImpl

@@ -5,10 +5,13 @@ package org.xtext.example.mydsl.myDsl.impl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.xtext.example.mydsl.myDsl.Event;
+import org.xtext.example.mydsl.myDsl.Goal;
 import org.xtext.example.mydsl.myDsl.MyDslPackage;
 import org.xtext.example.mydsl.myDsl.Trigger;
 
@@ -20,7 +23,8 @@ import org.xtext.example.mydsl.myDsl.Trigger;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.mydsl.myDsl.impl.TriggerImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.myDsl.impl.TriggerImpl#getEvent <em>Event</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.myDsl.impl.TriggerImpl#getGoal <em>Goal</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +32,24 @@ import org.xtext.example.mydsl.myDsl.Trigger;
 public class TriggerImpl extends MinimalEObjectImpl.Container implements Trigger
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getEvent() <em>Event</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getEvent()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
+  protected Event event;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getGoal() <em>Goal</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getGoal()
    * @generated
    * @ordered
    */
-  protected String name = NAME_EDEFAULT;
+  protected Goal goal;
 
   /**
    * <!-- begin-user-doc -->
@@ -73,9 +77,19 @@ public class TriggerImpl extends MinimalEObjectImpl.Container implements Trigger
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public Event getEvent()
   {
-    return name;
+    if (event != null && event.eIsProxy())
+    {
+      InternalEObject oldEvent = (InternalEObject)event;
+      event = (Event)eResolveProxy(oldEvent);
+      if (event != oldEvent)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, MyDslPackage.TRIGGER__EVENT, oldEvent, event));
+      }
+    }
+    return event;
   }
 
   /**
@@ -83,12 +97,65 @@ public class TriggerImpl extends MinimalEObjectImpl.Container implements Trigger
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public Event basicGetEvent()
   {
-    String oldName = name;
-    name = newName;
+    return event;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setEvent(Event newEvent)
+  {
+    Event oldEvent = event;
+    event = newEvent;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MyDslPackage.TRIGGER__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, MyDslPackage.TRIGGER__EVENT, oldEvent, event));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Goal getGoal()
+  {
+    if (goal != null && goal.eIsProxy())
+    {
+      InternalEObject oldGoal = (InternalEObject)goal;
+      goal = (Goal)eResolveProxy(oldGoal);
+      if (goal != oldGoal)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, MyDslPackage.TRIGGER__GOAL, oldGoal, goal));
+      }
+    }
+    return goal;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Goal basicGetGoal()
+  {
+    return goal;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setGoal(Goal newGoal)
+  {
+    Goal oldGoal = goal;
+    goal = newGoal;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MyDslPackage.TRIGGER__GOAL, oldGoal, goal));
   }
 
   /**
@@ -101,8 +168,12 @@ public class TriggerImpl extends MinimalEObjectImpl.Container implements Trigger
   {
     switch (featureID)
     {
-      case MyDslPackage.TRIGGER__NAME:
-        return getName();
+      case MyDslPackage.TRIGGER__EVENT:
+        if (resolve) return getEvent();
+        return basicGetEvent();
+      case MyDslPackage.TRIGGER__GOAL:
+        if (resolve) return getGoal();
+        return basicGetGoal();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -117,8 +188,11 @@ public class TriggerImpl extends MinimalEObjectImpl.Container implements Trigger
   {
     switch (featureID)
     {
-      case MyDslPackage.TRIGGER__NAME:
-        setName((String)newValue);
+      case MyDslPackage.TRIGGER__EVENT:
+        setEvent((Event)newValue);
+        return;
+      case MyDslPackage.TRIGGER__GOAL:
+        setGoal((Goal)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -134,8 +208,11 @@ public class TriggerImpl extends MinimalEObjectImpl.Container implements Trigger
   {
     switch (featureID)
     {
-      case MyDslPackage.TRIGGER__NAME:
-        setName(NAME_EDEFAULT);
+      case MyDslPackage.TRIGGER__EVENT:
+        setEvent((Event)null);
+        return;
+      case MyDslPackage.TRIGGER__GOAL:
+        setGoal((Goal)null);
         return;
     }
     super.eUnset(featureID);
@@ -151,27 +228,12 @@ public class TriggerImpl extends MinimalEObjectImpl.Container implements Trigger
   {
     switch (featureID)
     {
-      case MyDslPackage.TRIGGER__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case MyDslPackage.TRIGGER__EVENT:
+        return event != null;
+      case MyDslPackage.TRIGGER__GOAL:
+        return goal != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
   }
 
 } //TriggerImpl

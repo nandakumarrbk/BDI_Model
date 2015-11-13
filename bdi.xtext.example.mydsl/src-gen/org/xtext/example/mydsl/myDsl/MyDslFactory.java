@@ -86,6 +86,51 @@ public interface MyDslFactory extends EFactory
   Parameter createParameter();
 
   /**
+   * Returns a new object of class '<em>Operator</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Operator</em>'.
+   * @generated
+   */
+  Operator createOperator();
+
+  /**
+   * Returns a new object of class '<em>Condition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Condition</em>'.
+   * @generated
+   */
+  Condition createCondition();
+
+  /**
+   * Returns a new object of class '<em>Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Expression</em>'.
+   * @generated
+   */
+  Expression createExpression();
+
+  /**
+   * Returns a new object of class '<em>Term</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Term</em>'.
+   * @generated
+   */
+  Term createTerm();
+
+  /**
+   * Returns a new object of class '<em>Factor</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Factor</em>'.
+   * @generated
+   */
+  Factor createFactor();
+
+  /**
    * Returns a new object of class '<em>Plans</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -203,13 +248,40 @@ public interface MyDslFactory extends EFactory
   Perform createPerform();
 
   /**
-   * Returns a new object of class '<em>Condition</em>'.
+   * Returns a new object of class '<em>Plus</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Condition</em>'.
+   * @return a new object of class '<em>Plus</em>'.
    * @generated
    */
-  Condition createCondition();
+  Plus createPlus();
+
+  /**
+   * Returns a new object of class '<em>Minus</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Minus</em>'.
+   * @generated
+   */
+  Minus createMinus();
+
+  /**
+   * Returns a new object of class '<em>Multiply</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Multiply</em>'.
+   * @generated
+   */
+  Multiply createMultiply();
+
+  /**
+   * Returns a new object of class '<em>Division</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Division</em>'.
+   * @generated
+   */
+  Division createDivision();
 
   /**
    * Returns the package supported by this factory.

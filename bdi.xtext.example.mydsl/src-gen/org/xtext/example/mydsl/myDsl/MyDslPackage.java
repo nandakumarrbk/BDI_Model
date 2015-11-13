@@ -113,31 +113,13 @@ public interface MyDslPackage extends EPackage
   int AGENT__IMPORT = 1;
 
   /**
-   * The feature id for the '<em><b>Belief</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int AGENT__BELIEF = 2;
-
-  /**
-   * The feature id for the '<em><b>Plan</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int AGENT__PLAN = 3;
-
-  /**
    * The feature id for the '<em><b>Event</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int AGENT__EVENT = 4;
+  int AGENT__EVENT = 2;
 
   /**
    * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
@@ -146,7 +128,25 @@ public interface MyDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int AGENT__PARAMETERS = 5;
+  int AGENT__PARAMETERS = 3;
+
+  /**
+   * The feature id for the '<em><b>Belief</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AGENT__BELIEF = 4;
+
+  /**
+   * The feature id for the '<em><b>Plan</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AGENT__PLAN = 5;
 
   /**
    * The number of structural features of the '<em>Agent</em>' class.
@@ -214,34 +214,6 @@ public interface MyDslPackage extends EPackage
   int EVENTS_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.mydsl.myDsl.impl.TriggerImpl <em>Trigger</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.mydsl.myDsl.impl.TriggerImpl
-   * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getTrigger()
-   * @generated
-   */
-  int TRIGGER = 9;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TRIGGER__NAME = 0;
-
-  /**
-   * The number of structural features of the '<em>Trigger</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TRIGGER_FEATURE_COUNT = 1;
-
-  /**
    * The meta object id for the '{@link org.xtext.example.mydsl.myDsl.impl.EventImpl <em>Event</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -258,7 +230,7 @@ public interface MyDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EVENT__NAME = TRIGGER__NAME;
+  int EVENT__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Event Type</b></em>' attribute.
@@ -267,7 +239,7 @@ public interface MyDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EVENT__EVENT_TYPE = TRIGGER_FEATURE_COUNT + 0;
+  int EVENT__EVENT_TYPE = 1;
 
   /**
    * The feature id for the '<em><b>Parameter</b></em>' containment reference list.
@@ -276,7 +248,7 @@ public interface MyDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EVENT__PARAMETER = TRIGGER_FEATURE_COUNT + 1;
+  int EVENT__PARAMETER = 2;
 
   /**
    * The number of structural features of the '<em>Event</em>' class.
@@ -285,7 +257,7 @@ public interface MyDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EVENT_FEATURE_COUNT = TRIGGER_FEATURE_COUNT + 2;
+  int EVENT_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.myDsl.impl.ParametersImpl <em>Parameters</em>}' class.
@@ -344,6 +316,254 @@ public interface MyDslPackage extends EPackage
   int PARAMETER_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myDsl.impl.OperatorImpl <em>Operator</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myDsl.impl.OperatorImpl
+   * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getOperator()
+   * @generated
+   */
+  int OPERATOR = 7;
+
+  /**
+   * The feature id for the '<em><b>Equal To</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATOR__EQUAL_TO = 0;
+
+  /**
+   * The feature id for the '<em><b>Larger Than</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATOR__LARGER_THAN = 1;
+
+  /**
+   * The feature id for the '<em><b>Smaller Than</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATOR__SMALLER_THAN = 2;
+
+  /**
+   * The feature id for the '<em><b>Larger Or Equal To</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATOR__LARGER_OR_EQUAL_TO = 3;
+
+  /**
+   * The feature id for the '<em><b>Smaller Or Equal To</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATOR__SMALLER_OR_EQUAL_TO = 4;
+
+  /**
+   * The feature id for the '<em><b>Not Equal To</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATOR__NOT_EQUAL_TO = 5;
+
+  /**
+   * The number of structural features of the '<em>Operator</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATOR_FEATURE_COUNT = 6;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myDsl.impl.ConditionImpl <em>Condition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myDsl.impl.ConditionImpl
+   * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getCondition()
+   * @generated
+   */
+  int CONDITION = 8;
+
+  /**
+   * The feature id for the '<em><b>Subjective</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITION__SUBJECTIVE = 0;
+
+  /**
+   * The feature id for the '<em><b>Operator</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITION__OPERATOR = 1;
+
+  /**
+   * The feature id for the '<em><b>Objective</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITION__OBJECTIVE = 2;
+
+  /**
+   * The feature id for the '<em><b>And</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITION__AND = 3;
+
+  /**
+   * The feature id for the '<em><b>Or</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITION__OR = 4;
+
+  /**
+   * The feature id for the '<em><b>Compare Condition</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITION__COMPARE_CONDITION = 5;
+
+  /**
+   * The number of structural features of the '<em>Condition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITION_FEATURE_COUNT = 6;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myDsl.impl.ExpressionImpl <em>Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myDsl.impl.ExpressionImpl
+   * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getExpression()
+   * @generated
+   */
+  int EXPRESSION = 9;
+
+  /**
+   * The number of structural features of the '<em>Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myDsl.impl.TermImpl <em>Term</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myDsl.impl.TermImpl
+   * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getTerm()
+   * @generated
+   */
+  int TERM = 10;
+
+  /**
+   * The number of structural features of the '<em>Term</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TERM_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myDsl.impl.FactorImpl <em>Factor</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myDsl.impl.FactorImpl
+   * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getFactor()
+   * @generated
+   */
+  int FACTOR = 11;
+
+  /**
+   * The feature id for the '<em><b>Number</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACTOR__NUMBER = TERM_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Variable</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACTOR__VARIABLE = TERM_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACTOR__STRING = TERM_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Boolean</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACTOR__BOOLEAN = TERM_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACTOR__EXPRESSION = TERM_FEATURE_COUNT + 4;
+
+  /**
+   * The number of structural features of the '<em>Factor</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACTOR_FEATURE_COUNT = TERM_FEATURE_COUNT + 5;
+
+  /**
    * The meta object id for the '{@link org.xtext.example.mydsl.myDsl.impl.PlansImpl <em>Plans</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -351,7 +571,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getPlans()
    * @generated
    */
-  int PLANS = 7;
+  int PLANS = 12;
 
   /**
    * The feature id for the '<em><b>Plans</b></em>' containment reference list.
@@ -379,7 +599,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getPlan()
    * @generated
    */
-  int PLAN = 8;
+  int PLAN = 13;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -418,6 +638,43 @@ public interface MyDslPackage extends EPackage
   int PLAN_FEATURE_COUNT = 3;
 
   /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myDsl.impl.TriggerImpl <em>Trigger</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myDsl.impl.TriggerImpl
+   * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getTrigger()
+   * @generated
+   */
+  int TRIGGER = 14;
+
+  /**
+   * The feature id for the '<em><b>Event</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TRIGGER__EVENT = 0;
+
+  /**
+   * The feature id for the '<em><b>Goal</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TRIGGER__GOAL = 1;
+
+  /**
+   * The number of structural features of the '<em>Trigger</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TRIGGER_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link org.xtext.example.mydsl.myDsl.impl.BeliefSetImpl <em>Belief Set</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -425,7 +682,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getBeliefSet()
    * @generated
    */
-  int BELIEF_SET = 10;
+  int BELIEF_SET = 15;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -462,7 +719,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getBelief()
    * @generated
    */
-  int BELIEF = 11;
+  int BELIEF = 16;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -499,7 +756,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getFact()
    * @generated
    */
-  int FACT = 12;
+  int FACT = 17;
 
   /**
    * The feature id for the '<em><b>Statements</b></em>' containment reference.
@@ -527,7 +784,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getStatements()
    * @generated
    */
-  int STATEMENTS = 13;
+  int STATEMENTS = 18;
 
   /**
    * The feature id for the '<em><b>Statements</b></em>' attribute list.
@@ -555,7 +812,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getGoals()
    * @generated
    */
-  int GOALS = 14;
+  int GOALS = 19;
 
   /**
    * The feature id for the '<em><b>Goals</b></em>' containment reference list.
@@ -583,7 +840,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getGoal()
    * @generated
    */
-  int GOAL = 15;
+  int GOAL = 20;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -592,7 +849,7 @@ public interface MyDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GOAL__NAME = TRIGGER__NAME;
+  int GOAL__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Condition</b></em>' containment reference.
@@ -601,7 +858,7 @@ public interface MyDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GOAL__CONDITION = TRIGGER_FEATURE_COUNT + 0;
+  int GOAL__CONDITION = 1;
 
   /**
    * The number of structural features of the '<em>Goal</em>' class.
@@ -610,7 +867,7 @@ public interface MyDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GOAL_FEATURE_COUNT = TRIGGER_FEATURE_COUNT + 1;
+  int GOAL_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.myDsl.impl.AchieveImpl <em>Achieve</em>}' class.
@@ -620,7 +877,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getAchieve()
    * @generated
    */
-  int ACHIEVE = 16;
+  int ACHIEVE = 21;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -657,7 +914,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getQuery()
    * @generated
    */
-  int QUERY = 17;
+  int QUERY = 22;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -703,7 +960,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getMaintain()
    * @generated
    */
-  int MAINTAIN = 18;
+  int MAINTAIN = 23;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -740,7 +997,7 @@ public interface MyDslPackage extends EPackage
    * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getPerform()
    * @generated
    */
-  int PERFORM = 19;
+  int PERFORM = 24;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -770,32 +1027,152 @@ public interface MyDslPackage extends EPackage
   int PERFORM_FEATURE_COUNT = GOAL_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.mydsl.myDsl.impl.ConditionImpl <em>Condition</em>}' class.
+   * The meta object id for the '{@link org.xtext.example.mydsl.myDsl.impl.PlusImpl <em>Plus</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.example.mydsl.myDsl.impl.ConditionImpl
-   * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getCondition()
+   * @see org.xtext.example.mydsl.myDsl.impl.PlusImpl
+   * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getPlus()
    * @generated
    */
-  int CONDITION = 20;
+  int PLUS = 25;
 
   /**
-   * The feature id for the '<em><b>Statements</b></em>' attribute list.
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONDITION__STATEMENTS = 0;
+  int PLUS__LEFT = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
-   * The number of structural features of the '<em>Condition</em>' class.
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONDITION_FEATURE_COUNT = 1;
+  int PLUS__RIGHT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Plus</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PLUS_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myDsl.impl.MinusImpl <em>Minus</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myDsl.impl.MinusImpl
+   * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getMinus()
+   * @generated
+   */
+  int MINUS = 26;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MINUS__LEFT = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MINUS__RIGHT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Minus</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MINUS_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myDsl.impl.MultiplyImpl <em>Multiply</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myDsl.impl.MultiplyImpl
+   * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getMultiply()
+   * @generated
+   */
+  int MULTIPLY = 27;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLY__LEFT = TERM_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLY__RIGHT = TERM_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Multiply</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTIPLY_FEATURE_COUNT = TERM_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myDsl.impl.DivisionImpl <em>Division</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myDsl.impl.DivisionImpl
+   * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getDivision()
+   * @generated
+   */
+  int DIVISION = 28;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIVISION__LEFT = TERM_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIVISION__RIGHT = TERM_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Division</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIVISION_FEATURE_COUNT = TERM_FEATURE_COUNT + 2;
 
 
   /**
@@ -852,28 +1229,6 @@ public interface MyDslPackage extends EPackage
   EReference getAgent_Import();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.myDsl.Agent#getBelief <em>Belief</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Belief</em>'.
-   * @see org.xtext.example.mydsl.myDsl.Agent#getBelief()
-   * @see #getAgent()
-   * @generated
-   */
-  EReference getAgent_Belief();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.myDsl.Agent#getPlan <em>Plan</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Plan</em>'.
-   * @see org.xtext.example.mydsl.myDsl.Agent#getPlan()
-   * @see #getAgent()
-   * @generated
-   */
-  EReference getAgent_Plan();
-
-  /**
    * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.myDsl.Agent#getEvent <em>Event</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -894,6 +1249,28 @@ public interface MyDslPackage extends EPackage
    * @generated
    */
   EReference getAgent_Parameters();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.myDsl.Agent#getBelief <em>Belief</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Belief</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Agent#getBelief()
+   * @see #getAgent()
+   * @generated
+   */
+  EReference getAgent_Belief();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.myDsl.Agent#getPlan <em>Plan</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Plan</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Agent#getPlan()
+   * @see #getAgent()
+   * @generated
+   */
+  EReference getAgent_Plan();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.myDsl.Imports <em>Imports</em>}'.
@@ -946,6 +1323,17 @@ public interface MyDslPackage extends EPackage
    * @generated
    */
   EClass getEvent();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Event#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Event#getName()
+   * @see #getEvent()
+   * @generated
+   */
+  EAttribute getEvent_Name();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Event#getEventType <em>Event Type</em>}'.
@@ -1010,6 +1398,243 @@ public interface MyDslPackage extends EPackage
    * @generated
    */
   EAttribute getParameter_Name();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myDsl.Operator <em>Operator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Operator</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Operator
+   * @generated
+   */
+  EClass getOperator();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Operator#isEqualTo <em>Equal To</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Equal To</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Operator#isEqualTo()
+   * @see #getOperator()
+   * @generated
+   */
+  EAttribute getOperator_EqualTo();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Operator#isLargerThan <em>Larger Than</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Larger Than</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Operator#isLargerThan()
+   * @see #getOperator()
+   * @generated
+   */
+  EAttribute getOperator_LargerThan();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Operator#isSmallerThan <em>Smaller Than</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Smaller Than</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Operator#isSmallerThan()
+   * @see #getOperator()
+   * @generated
+   */
+  EAttribute getOperator_SmallerThan();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Operator#isLargerOrEqualTo <em>Larger Or Equal To</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Larger Or Equal To</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Operator#isLargerOrEqualTo()
+   * @see #getOperator()
+   * @generated
+   */
+  EAttribute getOperator_LargerOrEqualTo();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Operator#isSmallerOrEqualTo <em>Smaller Or Equal To</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Smaller Or Equal To</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Operator#isSmallerOrEqualTo()
+   * @see #getOperator()
+   * @generated
+   */
+  EAttribute getOperator_SmallerOrEqualTo();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Operator#isNotEqualTo <em>Not Equal To</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Not Equal To</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Operator#isNotEqualTo()
+   * @see #getOperator()
+   * @generated
+   */
+  EAttribute getOperator_NotEqualTo();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myDsl.Condition <em>Condition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Condition</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Condition
+   * @generated
+   */
+  EClass getCondition();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Condition#getSubjective <em>Subjective</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Subjective</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Condition#getSubjective()
+   * @see #getCondition()
+   * @generated
+   */
+  EAttribute getCondition_Subjective();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myDsl.Condition#getOperator <em>Operator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Operator</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Condition#getOperator()
+   * @see #getCondition()
+   * @generated
+   */
+  EReference getCondition_Operator();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myDsl.Condition#getObjective <em>Objective</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Objective</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Condition#getObjective()
+   * @see #getCondition()
+   * @generated
+   */
+  EReference getCondition_Objective();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Condition#isAnd <em>And</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>And</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Condition#isAnd()
+   * @see #getCondition()
+   * @generated
+   */
+  EAttribute getCondition_And();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Condition#isOr <em>Or</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Or</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Condition#isOr()
+   * @see #getCondition()
+   * @generated
+   */
+  EAttribute getCondition_Or();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myDsl.Condition#getCompareCondition <em>Compare Condition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Compare Condition</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Condition#getCompareCondition()
+   * @see #getCondition()
+   * @generated
+   */
+  EReference getCondition_CompareCondition();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myDsl.Expression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Expression</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Expression
+   * @generated
+   */
+  EClass getExpression();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myDsl.Term <em>Term</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Term</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Term
+   * @generated
+   */
+  EClass getTerm();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myDsl.Factor <em>Factor</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Factor</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Factor
+   * @generated
+   */
+  EClass getFactor();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Factor#getNumber <em>Number</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Number</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Factor#getNumber()
+   * @see #getFactor()
+   * @generated
+   */
+  EAttribute getFactor_Number();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Factor#getVariable <em>Variable</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Variable</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Factor#getVariable()
+   * @see #getFactor()
+   * @generated
+   */
+  EAttribute getFactor_Variable();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Factor#getString <em>String</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>String</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Factor#getString()
+   * @see #getFactor()
+   * @generated
+   */
+  EAttribute getFactor_String();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Factor#isBoolean <em>Boolean</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Boolean</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Factor#isBoolean()
+   * @see #getFactor()
+   * @generated
+   */
+  EAttribute getFactor_Boolean();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myDsl.Factor#getExpression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expression</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Factor#getExpression()
+   * @see #getFactor()
+   * @generated
+   */
+  EReference getFactor_Expression();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.myDsl.Plans <em>Plans</em>}'.
@@ -1086,15 +1711,26 @@ public interface MyDslPackage extends EPackage
   EClass getTrigger();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Trigger#getName <em>Name</em>}'.
+   * Returns the meta object for the reference '{@link org.xtext.example.mydsl.myDsl.Trigger#getEvent <em>Event</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.example.mydsl.myDsl.Trigger#getName()
+   * @return the meta object for the reference '<em>Event</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Trigger#getEvent()
    * @see #getTrigger()
    * @generated
    */
-  EAttribute getTrigger_Name();
+  EReference getTrigger_Event();
+
+  /**
+   * Returns the meta object for the reference '{@link org.xtext.example.mydsl.myDsl.Trigger#getGoal <em>Goal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Goal</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Trigger#getGoal()
+   * @see #getTrigger()
+   * @generated
+   */
+  EReference getTrigger_Goal();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.myDsl.BeliefSet <em>Belief Set</em>}'.
@@ -1234,6 +1870,17 @@ public interface MyDslPackage extends EPackage
   EClass getGoal();
 
   /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Goal#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Goal#getName()
+   * @see #getGoal()
+   * @generated
+   */
+  EAttribute getGoal_Name();
+
+  /**
    * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myDsl.Goal#getCondition <em>Condition</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1296,25 +1943,132 @@ public interface MyDslPackage extends EPackage
   EClass getPerform();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.example.mydsl.myDsl.Condition <em>Condition</em>}'.
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myDsl.Plus <em>Plus</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Condition</em>'.
-   * @see org.xtext.example.mydsl.myDsl.Condition
+   * @return the meta object for class '<em>Plus</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Plus
    * @generated
    */
-  EClass getCondition();
+  EClass getPlus();
 
   /**
-   * Returns the meta object for the attribute list '{@link org.xtext.example.mydsl.myDsl.Condition#getStatements <em>Statements</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myDsl.Plus#getLeft <em>Left</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Statements</em>'.
-   * @see org.xtext.example.mydsl.myDsl.Condition#getStatements()
-   * @see #getCondition()
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Plus#getLeft()
+   * @see #getPlus()
    * @generated
    */
-  EAttribute getCondition_Statements();
+  EReference getPlus_Left();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myDsl.Plus#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Plus#getRight()
+   * @see #getPlus()
+   * @generated
+   */
+  EReference getPlus_Right();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myDsl.Minus <em>Minus</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Minus</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Minus
+   * @generated
+   */
+  EClass getMinus();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myDsl.Minus#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Minus#getLeft()
+   * @see #getMinus()
+   * @generated
+   */
+  EReference getMinus_Left();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myDsl.Minus#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Minus#getRight()
+   * @see #getMinus()
+   * @generated
+   */
+  EReference getMinus_Right();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myDsl.Multiply <em>Multiply</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Multiply</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Multiply
+   * @generated
+   */
+  EClass getMultiply();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myDsl.Multiply#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Multiply#getLeft()
+   * @see #getMultiply()
+   * @generated
+   */
+  EReference getMultiply_Left();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myDsl.Multiply#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Multiply#getRight()
+   * @see #getMultiply()
+   * @generated
+   */
+  EReference getMultiply_Right();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myDsl.Division <em>Division</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Division</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Division
+   * @generated
+   */
+  EClass getDivision();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myDsl.Division#getLeft <em>Left</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Division#getLeft()
+   * @see #getDivision()
+   * @generated
+   */
+  EReference getDivision_Left();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myDsl.Division#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Division#getRight()
+   * @see #getDivision()
+   * @generated
+   */
+  EReference getDivision_Right();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -1384,22 +2138,6 @@ public interface MyDslPackage extends EPackage
     EReference AGENT__IMPORT = eINSTANCE.getAgent_Import();
 
     /**
-     * The meta object literal for the '<em><b>Belief</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference AGENT__BELIEF = eINSTANCE.getAgent_Belief();
-
-    /**
-     * The meta object literal for the '<em><b>Plan</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference AGENT__PLAN = eINSTANCE.getAgent_Plan();
-
-    /**
      * The meta object literal for the '<em><b>Event</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1414,6 +2152,22 @@ public interface MyDslPackage extends EPackage
      * @generated
      */
     EReference AGENT__PARAMETERS = eINSTANCE.getAgent_Parameters();
+
+    /**
+     * The meta object literal for the '<em><b>Belief</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference AGENT__BELIEF = eINSTANCE.getAgent_Belief();
+
+    /**
+     * The meta object literal for the '<em><b>Plan</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference AGENT__PLAN = eINSTANCE.getAgent_Plan();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.mydsl.myDsl.impl.ImportsImpl <em>Imports</em>}' class.
@@ -1460,6 +2214,14 @@ public interface MyDslPackage extends EPackage
      * @generated
      */
     EClass EVENT = eINSTANCE.getEvent();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EVENT__NAME = eINSTANCE.getEvent_Name();
 
     /**
      * The meta object literal for the '<em><b>Event Type</b></em>' attribute feature.
@@ -1512,6 +2274,192 @@ public interface MyDslPackage extends EPackage
      * @generated
      */
     EAttribute PARAMETER__NAME = eINSTANCE.getParameter_Name();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myDsl.impl.OperatorImpl <em>Operator</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myDsl.impl.OperatorImpl
+     * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getOperator()
+     * @generated
+     */
+    EClass OPERATOR = eINSTANCE.getOperator();
+
+    /**
+     * The meta object literal for the '<em><b>Equal To</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute OPERATOR__EQUAL_TO = eINSTANCE.getOperator_EqualTo();
+
+    /**
+     * The meta object literal for the '<em><b>Larger Than</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute OPERATOR__LARGER_THAN = eINSTANCE.getOperator_LargerThan();
+
+    /**
+     * The meta object literal for the '<em><b>Smaller Than</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute OPERATOR__SMALLER_THAN = eINSTANCE.getOperator_SmallerThan();
+
+    /**
+     * The meta object literal for the '<em><b>Larger Or Equal To</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute OPERATOR__LARGER_OR_EQUAL_TO = eINSTANCE.getOperator_LargerOrEqualTo();
+
+    /**
+     * The meta object literal for the '<em><b>Smaller Or Equal To</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute OPERATOR__SMALLER_OR_EQUAL_TO = eINSTANCE.getOperator_SmallerOrEqualTo();
+
+    /**
+     * The meta object literal for the '<em><b>Not Equal To</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute OPERATOR__NOT_EQUAL_TO = eINSTANCE.getOperator_NotEqualTo();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myDsl.impl.ConditionImpl <em>Condition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myDsl.impl.ConditionImpl
+     * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getCondition()
+     * @generated
+     */
+    EClass CONDITION = eINSTANCE.getCondition();
+
+    /**
+     * The meta object literal for the '<em><b>Subjective</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CONDITION__SUBJECTIVE = eINSTANCE.getCondition_Subjective();
+
+    /**
+     * The meta object literal for the '<em><b>Operator</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONDITION__OPERATOR = eINSTANCE.getCondition_Operator();
+
+    /**
+     * The meta object literal for the '<em><b>Objective</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONDITION__OBJECTIVE = eINSTANCE.getCondition_Objective();
+
+    /**
+     * The meta object literal for the '<em><b>And</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CONDITION__AND = eINSTANCE.getCondition_And();
+
+    /**
+     * The meta object literal for the '<em><b>Or</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CONDITION__OR = eINSTANCE.getCondition_Or();
+
+    /**
+     * The meta object literal for the '<em><b>Compare Condition</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONDITION__COMPARE_CONDITION = eINSTANCE.getCondition_CompareCondition();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myDsl.impl.ExpressionImpl <em>Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myDsl.impl.ExpressionImpl
+     * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getExpression()
+     * @generated
+     */
+    EClass EXPRESSION = eINSTANCE.getExpression();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myDsl.impl.TermImpl <em>Term</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myDsl.impl.TermImpl
+     * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getTerm()
+     * @generated
+     */
+    EClass TERM = eINSTANCE.getTerm();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myDsl.impl.FactorImpl <em>Factor</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myDsl.impl.FactorImpl
+     * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getFactor()
+     * @generated
+     */
+    EClass FACTOR = eINSTANCE.getFactor();
+
+    /**
+     * The meta object literal for the '<em><b>Number</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FACTOR__NUMBER = eINSTANCE.getFactor_Number();
+
+    /**
+     * The meta object literal for the '<em><b>Variable</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FACTOR__VARIABLE = eINSTANCE.getFactor_Variable();
+
+    /**
+     * The meta object literal for the '<em><b>String</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FACTOR__STRING = eINSTANCE.getFactor_String();
+
+    /**
+     * The meta object literal for the '<em><b>Boolean</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FACTOR__BOOLEAN = eINSTANCE.getFactor_Boolean();
+
+    /**
+     * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FACTOR__EXPRESSION = eINSTANCE.getFactor_Expression();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.mydsl.myDsl.impl.PlansImpl <em>Plans</em>}' class.
@@ -1576,12 +2524,20 @@ public interface MyDslPackage extends EPackage
     EClass TRIGGER = eINSTANCE.getTrigger();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Event</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TRIGGER__NAME = eINSTANCE.getTrigger_Name();
+    EReference TRIGGER__EVENT = eINSTANCE.getTrigger_Event();
+
+    /**
+     * The meta object literal for the '<em><b>Goal</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TRIGGER__GOAL = eINSTANCE.getTrigger_Goal();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.mydsl.myDsl.impl.BeliefSetImpl <em>Belief Set</em>}' class.
@@ -1700,6 +2656,14 @@ public interface MyDslPackage extends EPackage
     EClass GOAL = eINSTANCE.getGoal();
 
     /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute GOAL__NAME = eINSTANCE.getGoal_Name();
+
+    /**
      * The meta object literal for the '<em><b>Condition</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1756,22 +2720,108 @@ public interface MyDslPackage extends EPackage
     EClass PERFORM = eINSTANCE.getPerform();
 
     /**
-     * The meta object literal for the '{@link org.xtext.example.mydsl.myDsl.impl.ConditionImpl <em>Condition</em>}' class.
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myDsl.impl.PlusImpl <em>Plus</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.example.mydsl.myDsl.impl.ConditionImpl
-     * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getCondition()
+     * @see org.xtext.example.mydsl.myDsl.impl.PlusImpl
+     * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getPlus()
      * @generated
      */
-    EClass CONDITION = eINSTANCE.getCondition();
+    EClass PLUS = eINSTANCE.getPlus();
 
     /**
-     * The meta object literal for the '<em><b>Statements</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CONDITION__STATEMENTS = eINSTANCE.getCondition_Statements();
+    EReference PLUS__LEFT = eINSTANCE.getPlus_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PLUS__RIGHT = eINSTANCE.getPlus_Right();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myDsl.impl.MinusImpl <em>Minus</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myDsl.impl.MinusImpl
+     * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getMinus()
+     * @generated
+     */
+    EClass MINUS = eINSTANCE.getMinus();
+
+    /**
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MINUS__LEFT = eINSTANCE.getMinus_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MINUS__RIGHT = eINSTANCE.getMinus_Right();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myDsl.impl.MultiplyImpl <em>Multiply</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myDsl.impl.MultiplyImpl
+     * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getMultiply()
+     * @generated
+     */
+    EClass MULTIPLY = eINSTANCE.getMultiply();
+
+    /**
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MULTIPLY__LEFT = eINSTANCE.getMultiply_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MULTIPLY__RIGHT = eINSTANCE.getMultiply_Right();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myDsl.impl.DivisionImpl <em>Division</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myDsl.impl.DivisionImpl
+     * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getDivision()
+     * @generated
+     */
+    EClass DIVISION = eINSTANCE.getDivision();
+
+    /**
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIVISION__LEFT = eINSTANCE.getDivision_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DIVISION__RIGHT = eINSTANCE.getDivision_Right();
 
   }
 
