@@ -141,6 +141,7 @@ import "http://www.eclipse.org/xtext/xbase/Xbase" as xbase
     
      Plan:
     	'Plan {' name=ID
+    	PriorityValue=INT
     	Body=Body
     	Trigger=Trigger
     	'}'
@@ -166,6 +167,8 @@ import "http://www.eclipse.org/xtext/xbase/Xbase" as xbase
     
     Belief:
       'Belief {' name=ID
+        beliefGoal=[Goal]
+        beliefValidate=[Event]
        (Fact+=Fact)*
        '}'
     ;
@@ -197,12 +200,14 @@ import "http://www.eclipse.org/xtext/xbase/Xbase" as xbase
 	
 	Achieve:
 		'Achieve {' name=ID
+		Goalplan=[Plan]
         Condition=Condition
        '}'
 	;
 	
 	Query:
 		'Query {' name=ID
+		Goalplan=[Plan]
         Condition=Condition
         Result=Result
         '}'
@@ -210,12 +215,14 @@ import "http://www.eclipse.org/xtext/xbase/Xbase" as xbase
 	
 	Maintain:
 		'Maintain {' name=ID
+		Goalplan=[Plan]
         Condition=Condition
 		'}'
 	;
 	
 	Perform:
 		'Perform {' name=ID
+		Goalplan=[Plan]
         Condition=Condition
         '}'
 	;
