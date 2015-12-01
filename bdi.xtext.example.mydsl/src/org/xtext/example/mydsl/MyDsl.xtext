@@ -167,8 +167,8 @@ import "http://www.eclipse.org/xtext/xbase/Xbase" as xbase
     
     Belief:
       'Belief {' name=ID
-        beliefGoal=[Goal]
-        beliefValidate=[Event]
+        beliefGoal=STRING
+        beliefValidate=STRING
        (Fact+=Fact)*
        '}'
     ;
@@ -200,30 +200,30 @@ import "http://www.eclipse.org/xtext/xbase/Xbase" as xbase
 	
 	Achieve:
 		'Achieve {' name=ID
-		Goalplan=[Plan]
-        Condition=Condition
+		Goalplan=STRING
+        Condition=STRING
        '}'
 	;
 	
 	Query:
 		'Query {' name=ID
-		Goalplan=[Plan]
-        Condition=Condition
+		Goalplan=STRING
+        Condition=STRING
         Result=Result
         '}'
 	;
 	
 	Maintain:
 		'Maintain {' name=ID
-		Goalplan=[Plan]
-        Condition=Condition
+		Goalplan=STRING
+        Condition=STRING
 		'}'
 	;
 	
 	Perform:
 		'Perform {' name=ID
-		Goalplan=[Plan]
-        Condition=Condition
+		Goalplan=STRING
+        Condition=STRING
         '}'
 	;
 	
