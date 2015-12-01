@@ -138,19 +138,22 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID Condition=Condition)
+	 *     (name=ID Goalplan=STRING Condition=STRING)
 	 */
 	protected void sequence_Achieve(EObject context, Achieve semanticObject) {
 		if(errorAcceptor != null) {
 			if(transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.GOAL__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyDslPackage.Literals.GOAL__NAME));
+			if(transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.GOAL__GOALPLAN) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyDslPackage.Literals.GOAL__GOALPLAN));
 			if(transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.GOAL__CONDITION) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyDslPackage.Literals.GOAL__CONDITION));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getAchieveAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getAchieveAccess().getConditionConditionParserRuleCall_2_0(), semanticObject.getCondition());
+		feeder.accept(grammarAccess.getAchieveAccess().getGoalplanSTRINGTerminalRuleCall_2_0(), semanticObject.getGoalplan());
+		feeder.accept(grammarAccess.getAchieveAccess().getConditionSTRINGTerminalRuleCall_3_0(), semanticObject.getCondition());
 		feeder.finish();
 	}
 	
@@ -191,7 +194,7 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID Fact+=Fact*)
+	 *     (name=ID beliefGoal=STRING beliefValidate=STRING Fact+=Fact*)
 	 */
 	protected void sequence_Belief(EObject context, Belief semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -308,19 +311,22 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID Condition=Condition)
+	 *     (name=ID Goalplan=STRING Condition=STRING)
 	 */
 	protected void sequence_Maintain(EObject context, Maintain semanticObject) {
 		if(errorAcceptor != null) {
 			if(transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.GOAL__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyDslPackage.Literals.GOAL__NAME));
+			if(transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.GOAL__GOALPLAN) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyDslPackage.Literals.GOAL__GOALPLAN));
 			if(transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.GOAL__CONDITION) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyDslPackage.Literals.GOAL__CONDITION));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getMaintainAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getMaintainAccess().getConditionConditionParserRuleCall_2_0(), semanticObject.getCondition());
+		feeder.accept(grammarAccess.getMaintainAccess().getGoalplanSTRINGTerminalRuleCall_2_0(), semanticObject.getGoalplan());
+		feeder.accept(grammarAccess.getMaintainAccess().getConditionSTRINGTerminalRuleCall_3_0(), semanticObject.getCondition());
 		feeder.finish();
 	}
 	
@@ -368,31 +374,36 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID Condition=Condition)
+	 *     (name=ID Goalplan=STRING Condition=STRING)
 	 */
 	protected void sequence_Perform(EObject context, Perform semanticObject) {
 		if(errorAcceptor != null) {
 			if(transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.GOAL__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyDslPackage.Literals.GOAL__NAME));
+			if(transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.GOAL__GOALPLAN) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyDslPackage.Literals.GOAL__GOALPLAN));
 			if(transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.GOAL__CONDITION) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyDslPackage.Literals.GOAL__CONDITION));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getPerformAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getPerformAccess().getConditionConditionParserRuleCall_2_0(), semanticObject.getCondition());
+		feeder.accept(grammarAccess.getPerformAccess().getGoalplanSTRINGTerminalRuleCall_2_0(), semanticObject.getGoalplan());
+		feeder.accept(grammarAccess.getPerformAccess().getConditionSTRINGTerminalRuleCall_3_0(), semanticObject.getCondition());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (name=ID Body=Body Trigger=Trigger)
+	 *     (name=ID PriorityValue=INT Body=Body Trigger=Trigger)
 	 */
 	protected void sequence_Plan(EObject context, Plan semanticObject) {
 		if(errorAcceptor != null) {
 			if(transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.PLAN__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyDslPackage.Literals.PLAN__NAME));
+			if(transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.PLAN__PRIORITY_VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyDslPackage.Literals.PLAN__PRIORITY_VALUE));
 			if(transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.PLAN__BODY) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyDslPackage.Literals.PLAN__BODY));
 			if(transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.PLAN__TRIGGER) == ValueTransient.YES)
@@ -401,8 +412,9 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getPlanAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getPlanAccess().getBodyBodyParserRuleCall_2_0(), semanticObject.getBody());
-		feeder.accept(grammarAccess.getPlanAccess().getTriggerTriggerParserRuleCall_3_0(), semanticObject.getTrigger());
+		feeder.accept(grammarAccess.getPlanAccess().getPriorityValueINTTerminalRuleCall_2_0(), semanticObject.getPriorityValue());
+		feeder.accept(grammarAccess.getPlanAccess().getBodyBodyParserRuleCall_3_0(), semanticObject.getBody());
+		feeder.accept(grammarAccess.getPlanAccess().getTriggerTriggerParserRuleCall_4_0(), semanticObject.getTrigger());
 		feeder.finish();
 	}
 	
@@ -418,12 +430,14 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID Condition=Condition Result=Result)
+	 *     (name=ID Goalplan=STRING Condition=STRING Result=Result)
 	 */
 	protected void sequence_Query(EObject context, Query semanticObject) {
 		if(errorAcceptor != null) {
 			if(transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.GOAL__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyDslPackage.Literals.GOAL__NAME));
+			if(transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.GOAL__GOALPLAN) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyDslPackage.Literals.GOAL__GOALPLAN));
 			if(transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.GOAL__CONDITION) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MyDslPackage.Literals.GOAL__CONDITION));
 			if(transientValues.isValueTransient(semanticObject, MyDslPackage.Literals.QUERY__RESULT) == ValueTransient.YES)
@@ -432,8 +446,9 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getQueryAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getQueryAccess().getConditionConditionParserRuleCall_2_0(), semanticObject.getCondition());
-		feeder.accept(grammarAccess.getQueryAccess().getResultResultParserRuleCall_3_0(), semanticObject.getResult());
+		feeder.accept(grammarAccess.getQueryAccess().getGoalplanSTRINGTerminalRuleCall_2_0(), semanticObject.getGoalplan());
+		feeder.accept(grammarAccess.getQueryAccess().getConditionSTRINGTerminalRuleCall_3_0(), semanticObject.getCondition());
+		feeder.accept(grammarAccess.getQueryAccess().getResultResultParserRuleCall_4_0(), semanticObject.getResult());
 		feeder.finish();
 	}
 	

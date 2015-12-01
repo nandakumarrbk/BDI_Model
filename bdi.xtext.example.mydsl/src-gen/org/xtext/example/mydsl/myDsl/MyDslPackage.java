@@ -611,13 +611,22 @@ public interface MyDslPackage extends EPackage
   int PLAN__NAME = 0;
 
   /**
+   * The feature id for the '<em><b>Priority Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PLAN__PRIORITY_VALUE = 1;
+
+  /**
    * The feature id for the '<em><b>Body</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PLAN__BODY = 1;
+  int PLAN__BODY = 2;
 
   /**
    * The feature id for the '<em><b>Trigger</b></em>' containment reference.
@@ -626,7 +635,7 @@ public interface MyDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PLAN__TRIGGER = 2;
+  int PLAN__TRIGGER = 3;
 
   /**
    * The number of structural features of the '<em>Plan</em>' class.
@@ -635,7 +644,7 @@ public interface MyDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PLAN_FEATURE_COUNT = 3;
+  int PLAN_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.myDsl.impl.TriggerImpl <em>Trigger</em>}' class.
@@ -731,13 +740,31 @@ public interface MyDslPackage extends EPackage
   int BELIEF__NAME = 0;
 
   /**
+   * The feature id for the '<em><b>Belief Goal</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BELIEF__BELIEF_GOAL = 1;
+
+  /**
+   * The feature id for the '<em><b>Belief Validate</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BELIEF__BELIEF_VALIDATE = 2;
+
+  /**
    * The feature id for the '<em><b>Fact</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BELIEF__FACT = 1;
+  int BELIEF__FACT = 3;
 
   /**
    * The number of structural features of the '<em>Belief</em>' class.
@@ -746,7 +773,7 @@ public interface MyDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BELIEF_FEATURE_COUNT = 2;
+  int BELIEF_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.myDsl.impl.FactImpl <em>Fact</em>}' class.
@@ -852,13 +879,22 @@ public interface MyDslPackage extends EPackage
   int GOAL__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Condition</b></em>' containment reference.
+   * The feature id for the '<em><b>Goalplan</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GOAL__CONDITION = 1;
+  int GOAL__GOALPLAN = 1;
+
+  /**
+   * The feature id for the '<em><b>Condition</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GOAL__CONDITION = 2;
 
   /**
    * The number of structural features of the '<em>Goal</em>' class.
@@ -867,7 +903,7 @@ public interface MyDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GOAL_FEATURE_COUNT = 2;
+  int GOAL_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.myDsl.impl.AchieveImpl <em>Achieve</em>}' class.
@@ -889,7 +925,16 @@ public interface MyDslPackage extends EPackage
   int ACHIEVE__NAME = GOAL__NAME;
 
   /**
-   * The feature id for the '<em><b>Condition</b></em>' containment reference.
+   * The feature id for the '<em><b>Goalplan</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACHIEVE__GOALPLAN = GOAL__GOALPLAN;
+
+  /**
+   * The feature id for the '<em><b>Condition</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -926,7 +971,16 @@ public interface MyDslPackage extends EPackage
   int QUERY__NAME = GOAL__NAME;
 
   /**
-   * The feature id for the '<em><b>Condition</b></em>' containment reference.
+   * The feature id for the '<em><b>Goalplan</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUERY__GOALPLAN = GOAL__GOALPLAN;
+
+  /**
+   * The feature id for the '<em><b>Condition</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -972,7 +1026,16 @@ public interface MyDslPackage extends EPackage
   int MAINTAIN__NAME = GOAL__NAME;
 
   /**
-   * The feature id for the '<em><b>Condition</b></em>' containment reference.
+   * The feature id for the '<em><b>Goalplan</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAINTAIN__GOALPLAN = GOAL__GOALPLAN;
+
+  /**
+   * The feature id for the '<em><b>Condition</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1009,7 +1072,16 @@ public interface MyDslPackage extends EPackage
   int PERFORM__NAME = GOAL__NAME;
 
   /**
-   * The feature id for the '<em><b>Condition</b></em>' containment reference.
+   * The feature id for the '<em><b>Goalplan</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PERFORM__GOALPLAN = GOAL__GOALPLAN;
+
+  /**
+   * The feature id for the '<em><b>Condition</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1679,6 +1751,17 @@ public interface MyDslPackage extends EPackage
   EAttribute getPlan_Name();
 
   /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Plan#getPriorityValue <em>Priority Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Priority Value</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Plan#getPriorityValue()
+   * @see #getPlan()
+   * @generated
+   */
+  EAttribute getPlan_PriorityValue();
+
+  /**
    * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Plan#getBody <em>Body</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1786,6 +1869,28 @@ public interface MyDslPackage extends EPackage
   EAttribute getBelief_Name();
 
   /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Belief#getBeliefGoal <em>Belief Goal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Belief Goal</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Belief#getBeliefGoal()
+   * @see #getBelief()
+   * @generated
+   */
+  EAttribute getBelief_BeliefGoal();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Belief#getBeliefValidate <em>Belief Validate</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Belief Validate</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Belief#getBeliefValidate()
+   * @see #getBelief()
+   * @generated
+   */
+  EAttribute getBelief_BeliefValidate();
+
+  /**
    * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.myDsl.Belief#getFact <em>Fact</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1881,15 +1986,26 @@ public interface MyDslPackage extends EPackage
   EAttribute getGoal_Name();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.myDsl.Goal#getCondition <em>Condition</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Goal#getGoalplan <em>Goalplan</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Condition</em>'.
+   * @return the meta object for the attribute '<em>Goalplan</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Goal#getGoalplan()
+   * @see #getGoal()
+   * @generated
+   */
+  EAttribute getGoal_Goalplan();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Goal#getCondition <em>Condition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Condition</em>'.
    * @see org.xtext.example.mydsl.myDsl.Goal#getCondition()
    * @see #getGoal()
    * @generated
    */
-  EReference getGoal_Condition();
+  EAttribute getGoal_Condition();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.myDsl.Achieve <em>Achieve</em>}'.
@@ -2498,6 +2614,14 @@ public interface MyDslPackage extends EPackage
     EAttribute PLAN__NAME = eINSTANCE.getPlan_Name();
 
     /**
+     * The meta object literal for the '<em><b>Priority Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PLAN__PRIORITY_VALUE = eINSTANCE.getPlan_PriorityValue();
+
+    /**
      * The meta object literal for the '<em><b>Body</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2584,6 +2708,22 @@ public interface MyDslPackage extends EPackage
     EAttribute BELIEF__NAME = eINSTANCE.getBelief_Name();
 
     /**
+     * The meta object literal for the '<em><b>Belief Goal</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BELIEF__BELIEF_GOAL = eINSTANCE.getBelief_BeliefGoal();
+
+    /**
+     * The meta object literal for the '<em><b>Belief Validate</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BELIEF__BELIEF_VALIDATE = eINSTANCE.getBelief_BeliefValidate();
+
+    /**
      * The meta object literal for the '<em><b>Fact</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2664,12 +2804,20 @@ public interface MyDslPackage extends EPackage
     EAttribute GOAL__NAME = eINSTANCE.getGoal_Name();
 
     /**
-     * The meta object literal for the '<em><b>Condition</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Goalplan</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference GOAL__CONDITION = eINSTANCE.getGoal_Condition();
+    EAttribute GOAL__GOALPLAN = eINSTANCE.getGoal_Goalplan();
+
+    /**
+     * The meta object literal for the '<em><b>Condition</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute GOAL__CONDITION = eINSTANCE.getGoal_Condition();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.mydsl.myDsl.impl.AchieveImpl <em>Achieve</em>}' class.

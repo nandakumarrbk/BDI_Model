@@ -65,6 +65,7 @@
     </genClasses>
     <genClasses ecoreClass="MyDsl.ecore#//Plan">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Plan/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Plan/PriorityValue"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Plan/Body"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Plan/Trigger"/>
     </genClasses>
@@ -78,6 +79,8 @@
     </genClasses>
     <genClasses ecoreClass="MyDsl.ecore#//Belief">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Belief/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Belief/beliefGoal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Belief/beliefValidate"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Belief/Fact"/>
     </genClasses>
     <genClasses ecoreClass="MyDsl.ecore#//Fact">
@@ -91,7 +94,8 @@
     </genClasses>
     <genClasses ecoreClass="MyDsl.ecore#//Goal">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Goal/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Goal/Condition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Goal/Goalplan"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Goal/Condition"/>
     </genClasses>
     <genClasses ecoreClass="MyDsl.ecore#//Achieve"/>
     <genClasses ecoreClass="MyDsl.ecore#//Query">
